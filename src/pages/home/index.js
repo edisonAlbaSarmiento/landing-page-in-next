@@ -19,7 +19,7 @@ export default function Home() {
 
           <h1 className={styles.title}>
             Welcome to{' '}
-            <Link href={`/contact`}>
+            <Link href={`/about`}>
               <a>About</a>
             </Link>
           </h1>
