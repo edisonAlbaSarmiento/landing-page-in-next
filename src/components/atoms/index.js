@@ -1,7 +1,5 @@
-import Header from './header';
-import Title from './title';
+import TypographyComponent from './typography';
+import ButtonComponent from './buttom';
+import TextFieldComponent from './textField';
 
-export default {
-  Header,
-  Title,
-};
+export { TypographyComponent, ButtonComponent, TextFieldComponent };

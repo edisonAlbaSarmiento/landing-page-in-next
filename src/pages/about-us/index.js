@@ -2,6 +2,7 @@ import Head from 'next/head';
 import styles from '../../styles/Home.module.css';
 import Link from 'next/link';
 import { Body, Title } from './styles';
+import { HomeTemplate } from '../../components/templates';
 
 export default function About() {
   return (
@@ -11,7 +12,7 @@ export default function About() {
           <title>About us </title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-
+        <HomeTemplate />
         <main className={styles.main}>
           <Title className={styles.title}>
             Welcome to about <a href="https://nextjs.org">Edi.js!</a>
