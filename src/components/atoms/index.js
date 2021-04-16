@@ -1,5 +1,5 @@
-import TypographyComponent from './typography';
+import Typography from './typography';
 import ButtonComponent from './buttom';
 import TextFieldComponent from './textField';
 
-export { TypographyComponent, ButtonComponent, TextFieldComponent };
+export { Typography, ButtonComponent, TextFieldComponent };
