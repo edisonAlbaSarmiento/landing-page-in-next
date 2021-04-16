@@ -83,7 +83,14 @@ import { ContenForm, AddEventBanner } from 'components/organisms';
 // import { fetchEventData } from 'services/EventDataService';
 
 const DummyView = () => (
-  <div style={{ backgroundColor: '#adadad', height: '100vh' }}></div>
+  <div style={{ backgroundColor: '#adadad', height: '100vh' }}>
+    <h1>
+      Welcome to{' '}
+      {/* <Link href={`/contact`}>
+        <a>Contact</a>{' '}
+      </Link>{' '} */}
+    </h1>
+  </div>
 );
 
 const About = () => {
