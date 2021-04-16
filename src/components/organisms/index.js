@@ -1,3 +1,4 @@
 import ContenForm from './contenForm';
+import AddEventBanner from './addEventBanner';
 
-export { ContenForm };
+export { ContenForm, AddEventBanner };
