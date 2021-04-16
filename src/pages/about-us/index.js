@@ -3,24 +3,24 @@ import styles from '../../styles/Home.module.css';
 import Link from 'next/link';
 import { Body, Title } from './styles';
 
-export default function Home() {
+export default function About() {
   return (
     <Body>
       <div className={styles.container}>
         <Head>
-          <title>Create Next App</title>
+          <title>About us </title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
         <main className={styles.main}>
           <Title className={styles.title}>
-            Welcome to <a href="https://nextjs.org">Next.js!</a>
+            Welcome to about <a href="https://nextjs.org">Edi.js!</a>
           </Title>
 
           <h1 className={styles.title}>
             Welcome to{' '}
-            <Link href={`/about`}>
-              <a>About</a>
+            <Link href={`/contact`}>
+              <a>Contact</a>
             </Link>
           </h1>
           <p className={styles.description}>
