@@ -21,7 +21,7 @@ const useStyle = makeStyles((theme) => ({
   rightPanel: {},
 }));
 
-const ContactTemplate = (props) => {
+function ContactTemplate(props) {
   const style = useStyle();
 
   return (
@@ -46,7 +46,7 @@ const ContactTemplate = (props) => {
       </Paper>
     </div>
   );
-};
+}
 
 ContactTemplate.propTypes = {
   sideNav: PropTypes.element.isRequired,
