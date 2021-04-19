@@ -25,26 +25,29 @@ const HomeTemplate = (props) => {
   const style = useStyle();
 
   return (
-    <div className={style.root}>
-      <Paper className={style.paper}>
-        <Grid container className={style.container} spacing={2}>
-          <Grid item xs={2} className={style.sideNav}>
-            {props.sideNav}
-          </Grid>
-          <Grid item container xs alignContent="flex-start" spacing={2}>
-            <Grid item xs={12} className={style.banner}>
-              {props.banner}
-            </Grid>
-            <Grid item xs={12} className={style.content}>
-              {props.content}
-            </Grid>
-          </Grid>
-          <Grid item xs={3} className={style.rightPanel}>
-            {props.rightPanel}
-          </Grid>
-        </Grid>
-      </Paper>
-    </div>
+    <Grid container direction="column" justify="flex-start" alignItems="center">
+      {props.header}
+    </Grid>
+    // <div className={style.root}>
+    //   <Paper className={style.paper}>
+    //     <Grid container className={style.container} spacing={2}>
+    //       <Grid item xs={2} className={style.sideNav}>
+    //         {props.header}
+    //       </Grid>
+    //       {/* <Grid item container xs alignContent="flex-start" spacing={2}>
+    //         <Grid item xs={8} className={style.banner}>
+    //           {props.banner}
+    //         </Grid>
+    //         <Grid item xs={8} className={style.content}>
+    //           {props.content}
+    //         </Grid>
+    //       </Grid>
+    //       <Grid item xs={3} className={style.rightPanel}>
+    //         {props.rightPanel}
+    //       </Grid> */}
+    //     </Grid>
+    //   </Paper>
+    // </div>
   );
 };
 

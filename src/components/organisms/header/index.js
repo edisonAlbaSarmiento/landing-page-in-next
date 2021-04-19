@@ -1,12 +1,14 @@
-import { Content } from './styles';
+import { ContentOrganism } from './styles';
 import { useRouter } from 'next/router';
+import { ContentHeader } from '../../molecules';
 
 export default function Header() {
   return (
-    <Content>
+    <ContentOrganism>
       <Link href="/">Home</Link>
-      <Link href="/about">About</Link>
-    </Content>
+      <Link href="/about-us">About</Link>
+      <ContentHeader />
+    </ContentOrganism>
   );
 }
 

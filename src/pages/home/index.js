@@ -1,6 +1,8 @@
-import { ContactTemplate } from 'components/templates';
-import { ContenForm, AddEventBanner } from 'components/organisms';
+import { HomeTemplate } from 'components/templates';
+import { ContenForm, AddEventBanner, Header } from 'components/organisms';
 import Link from 'next/link';
+import Head from 'next/head';
+
 // import { fetchEventData } from 'services/EventDataService';
 
 function DummyView() {
@@ -39,34 +41,43 @@ function Home() {
   // }, [fetchEventList]);
 
   return (
-    <ContactTemplate
-      sideNav={<DummyView />}
-      banner={
-        <AddEventBanner
-          date={
-            eventDataList.length > 0
-              ? eventDataList[0].date
-              : '12:12:12 12/12/12'
-          }
-          title={
-            eventDataList.length > 0
-              ? eventDataList[0].title
-              : 'torybook Event 102'
-          }
-          description={
-            eventDataList.length > 0
-              ? eventDataList[0].description
-              : 'Event description 10'
-          }
-          type={eventDataList.length > 0 ? eventDataList[0].type : 'Reminder'}
-          onSubmit={handleAddEvent}
-        />
-      }
-      rightPanel={
-        <ContenForm title="Upcoming Event" eventDataList={eventDataList} />
-      }
-      content={<AddEventBanner validate onSubmit={handleAddEvent} />}
-    />
+    <>
+      <Head>
+        <title>Create Next App</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <HomeTemplate
+        header={<Header />}
+        informationPage={
+          <AddEventBanner
+            date={
+              eventDataList.length > 0
+                ? eventDataList[0].date
+                : '12:12:12 12/12/12'
+            }
+            title={
+              eventDataList.length > 0
+                ? eventDataList[0].title
+                : 'torybook Event 102'
+            }
+            description={
+              eventDataList.length > 0
+                ? eventDataList[0].description
+                : 'Event description 10'
+            }
+            type={eventDataList.length > 0 ? eventDataList[0].type : 'Reminder'}
+            onSubmit={handleAddEvent}
+          />
+        }
+        about={
+          <ContenForm title="Upcoming Event" eventDataList={eventDataList} />
+        }
+        casesStudy={<AddEventBanner validate onSubmit={handleAddEvent} />}
+        team={<AddEventBanner validate onSubmit={handleAddEvent} />}
+        contact={<AddEventBanner validate onSubmit={handleAddEvent} />}
+        footer={<AddEventBanner validate onSubmit={handleAddEvent} />}
+      />
+    </>
   );
 }
 
