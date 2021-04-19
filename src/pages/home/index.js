@@ -1,20 +1,26 @@
 import { ContactTemplate } from 'components/templates';
 import { ContenForm, AddEventBanner } from 'components/organisms';
-
+import Link from 'next/link';
 // import { fetchEventData } from 'services/EventDataService';
 
-const DummyView = () => (
-  <div style={{ backgroundColor: '#adadad', height: '100vh' }}>
-    <h1>
-      Welcome to{' '}
-      {/* <Link href={`/contact`}>
-        <a>Contact</a>{' '}
-      </Link>{' '} */}
-    </h1>
-  </div>
-);
+function DummyView() {
+  return (
+    <div style={{ backgroundColor: '#adadad', height: '100vh' }}>
+      <h1>
+        Welcome to{' '}
+        <Link href={`/contact`}>
+          <a>Contact</a>
+        </Link>
+        {/* <div>
+            <Link href="/"><a> Home </a></Link>
+            <Link href="/about"><a> About </a></Link>
+        </div> */}
+      </h1>
+    </div>
+  );
+}
 
-const Home = () => {
+function Home() {
   const eventDataList = [];
 
   // const fetchEventList = useCallback(async () => {
@@ -62,7 +68,7 @@ const Home = () => {
       content={<AddEventBanner validate onSubmit={handleAddEvent} />}
     />
   );
-};
+}
 
 Home.propTypes = {};
 
