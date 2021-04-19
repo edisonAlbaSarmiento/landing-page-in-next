@@ -14,7 +14,7 @@ const DummyView = () => (
   </div>
 );
 
-const About = () => {
+const Home = () => {
   const eventDataList = [];
 
   // const fetchEventList = useCallback(async () => {
@@ -64,8 +64,8 @@ const About = () => {
   );
 };
 
-About.propTypes = {};
+Home.propTypes = {};
 
-About.defaultProps = {};
+Home.defaultProps = {};
 
-export default About;
+export default Home;
