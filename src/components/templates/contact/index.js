@@ -21,7 +21,7 @@ const useStyle = makeStyles((theme) => ({
   rightPanel: {},
 }));
 
-const HomeTemplate = (props) => {
+const ContactTemplate = (props) => {
   const style = useStyle();
 
   return (
@@ -48,13 +48,13 @@ const HomeTemplate = (props) => {
   );
 };
 
-HomeTemplate.propTypes = {
+ContactTemplate.propTypes = {
   sideNav: PropTypes.element.isRequired,
   rightPanel: PropTypes.element.isRequired,
   banner: PropTypes.element.isRequired,
   content: PropTypes.element.isRequired,
 };
 
-HomeTemplate.defaultProps = {};
+ContactTemplate.defaultProps = {};
 
-export default HomeTemplate;
+export default ContactTemplate;

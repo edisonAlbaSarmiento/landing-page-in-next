@@ -21,6 +21,13 @@ export default function Home() {
             <a>About new</a>
           </Link>
         </h1>
+
+        <h1 className={styles.title}>
+          Welcome to{' '}
+          <Link href={`/home`}>
+            <a>Home</a>
+          </Link>
+        </h1>
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
