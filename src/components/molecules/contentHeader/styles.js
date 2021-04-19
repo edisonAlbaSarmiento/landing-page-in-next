@@ -9,7 +9,7 @@ export const Content = styled.div`
 
 export const ContentTitle = styled.div`
   width: 100%;
-  background-color: green;
+  background-color: ${(props) => props.theme.color.blueBackground};
 `;
 
 export const ContentImage = styled.div`
@@ -19,12 +19,14 @@ export const ContentImage = styled.div`
 
 export const ContentImageBackBackground = styled.div`
   background-color: orange;
+  position: relative;
   width: 100%;
   height: 100%;
 `;
 
 export const ContentImageBackground = styled.div`
-  background-color: oldlace;
+  background-color: blue;
+  position: absolute;
   bottom: 0.4px;
 `;
 
@@ -38,4 +40,9 @@ export const SubTitle = styled.p`
   color: rgb(255, 255, 255);
   font-size: 25px;
   font-weight: normal;
+`;
+
+export const ContentButton = styled.div`
+  width: 100%;
+  padding-bottom: 5%;
 `;

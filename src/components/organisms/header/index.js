@@ -5,8 +5,8 @@ import { ContentHeader } from '../../molecules';
 export default function Header() {
   return (
     <ContentOrganism>
-      <Link href="/">Home</Link>
-      <Link href="/about-us">About</Link>
+      {/* <Link href="/">Home</Link>
+      <Link href="/about-us">About</Link> */}
       <ContentHeader />
     </ContentOrganism>
   );
