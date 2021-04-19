@@ -6,9 +6,10 @@ import {
   ContentImageBackground,
   Title,
   SubTitle,
+  ContentButton,
 } from './styles';
 import Image from 'next/image';
-import { Typography } from 'components/atoms';
+import { Typography, ButtonContact } from 'components/atoms';
 
 function ContentHeader(props) {
   return (
@@ -29,6 +30,22 @@ function ContentHeader(props) {
               Construyendo ecosistemas digitales de alto impacto.
             </SubTitle>
           </Typography>
+          <ContentButton>
+            <Image
+              src="https://raw.githubusercontent.com/edisonAlbaSarmiento/landing-page-in-next/main/src/static/images/teamImaginamos.png"
+              alt="team imaginamos"
+              width={480}
+              height={100}
+            />
+          </ContentButton>
+
+          <ButtonContact
+            widthButton="40%"
+            heightButtom="15%"
+            onClick={() => console.log('click')}
+          >
+            AGENDAR UNA CITA
+          </ButtonContact>
         </ContentTitle>
 
         <ContentImageBackBackground>
