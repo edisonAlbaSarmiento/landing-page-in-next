@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 const getMappedVariant = (variant) => {
   switch (variant) {
     case 'header':
-      return 'h4';
+      return 'h2';
     case 'title':
       return 'subtitle1';
     case 'subtitle':
