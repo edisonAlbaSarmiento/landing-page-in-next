@@ -17,17 +17,31 @@ export const ContentImageBackBackground = styled.div`
   display: flex;
   justify-content: flex-end;
   position: relative;
+  /* @media (min-width: 800px) {
+    width: 100%;
+  } */
 `;
 
 export const ContentImage = styled.div`
   position: relative;
   left: 12%;
+  /* @media (min-width: 800px) {
+    left: 20%;
+  } */
 `;
 
 export const ContentImageBackground = styled.div`
   position: absolute;
   top: 12.1%;
   left: 23%;
+  animation-fill-mode: both;
+  animation-duration: 1000ms;
+  animation-delay: 0ms;
+  animation-iteration-count: 1;
+  opacity: 1;
+  /* @media (min-width: 800px) {
+    top: 21.4%;
+  } */
 `;
 
 export const Title = styled.p`

@@ -43,7 +43,7 @@ function Home() {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Imaginamos || Vivimos para transformar el futuro</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HomeTemplate
