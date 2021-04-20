@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Content = styled.div`
   width: 100%;
-  background-color: yellow;
   display: flex;
   flex-direction: row;
 `;
@@ -10,24 +9,25 @@ export const Content = styled.div`
 export const ContentTitle = styled.div`
   width: 100%;
   background-color: ${(props) => props.theme.color.blueBackground};
-`;
-
-export const ContentImage = styled.div`
-  width: 100%;
-  background-color: blue;
+  padding: 3.3%;
 `;
 
 export const ContentImageBackBackground = styled.div`
-  background-color: orange;
-  position: relative;
   width: 100%;
-  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+`;
+
+export const ContentImage = styled.div`
+  position: relative;
+  left: 12%;
 `;
 
 export const ContentImageBackground = styled.div`
-  background-color: blue;
   position: absolute;
-  bottom: 0.4px;
+  top: 12.1%;
+  left: 23%;
 `;
 
 export const Title = styled.p`
