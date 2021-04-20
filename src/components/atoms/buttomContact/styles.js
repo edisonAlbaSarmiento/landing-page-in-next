@@ -6,14 +6,16 @@ export const Button = styled.button`
   border: 3px solid rgb(123, 245, 177);
   border-radius: 5px;
   font-size: 16px;
-  color: rgb(255, 255, 255);
+  color: ${(props) => (props.color ? props.color : rgb(255, 255, 255))};
   display: flex;
-  -webkit-box-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
   align-items: center;
   background-color: transparent;
   font-weight: bold;
   outline: initial;
   cursor: pointer;
+  &:hover {
+    background-color: rgb(123, 245, 177);
+    color: ${(props) => props.theme.color.blueBackground};
+  }
 `;

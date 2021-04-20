@@ -2,13 +2,23 @@ import PropTypes from 'prop-types';
 import { Button } from './styles';
 
 const ButtonContact = (props) => {
-  const { widthButton, heightButtom, disabled, onClick } = props;
+  const {
+    widthButton,
+    heightButtom,
+    disabled,
+    onClick,
+    fontSize,
+    color,
+  } = props;
+  console.log('disabled', disabled);
   return (
     <Button
       disabled={disabled}
       onClick={onClick}
       widthButton={widthButton}
       heightButtom={heightButtom}
+      fontSize={fontSize}
+      color={color}
     >
       {props.children}
     </Button>
@@ -21,17 +31,14 @@ ButtonContact.propTypes = {
   onClick: PropTypes.func,
   widthButton: PropTypes.string,
   heightButtom: PropTypes.string,
-  border: PropTypes.string,
   color: PropTypes.string,
   fontSize: PropTypes.string,
 };
 
 ButtonContact.defaultProps = {
   disabled: false,
-  border: null,
   color: 'white',
   fontSize: '16px',
-  paddingButton: 0,
 };
 
 export default ButtonContact;

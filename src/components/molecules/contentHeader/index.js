@@ -10,18 +10,20 @@ import {
 } from './styles';
 import Image from 'next/image';
 import { Typography, ButtonContact } from 'components/atoms';
+import Fade from 'react-reveal/Fade';
+import Bounce from 'react-reveal/Bounce';
 
 function ContentHeader(props) {
   return (
-    <>
-      <Image
-        src="https://raw.githubusercontent.com/edisonAlbaSarmiento/landing-page-in-next/main/src/static/images/iconImaginamos.png"
-        alt="Picture of the author"
-        width={190}
-        height={80}
-      />
-      <Content>
-        <ContentTitle>
+    <Content>
+      <ContentTitle>
+        <Image
+          src="https://raw.githubusercontent.com/edisonAlbaSarmiento/landing-page-in-next/main/src/static/images/iconImaginamos.png"
+          alt="Picture of the author"
+          width={200}
+          height={60}
+        />
+        <Bounce left>
           <Typography variant="header">
             <Title>Vivimos para transformar el futuro</Title>
           </Typography>
@@ -38,36 +40,39 @@ function ContentHeader(props) {
               height={100}
             />
           </ContentButton>
+        </Bounce>
+        <ButtonContact
+          widthButton="30%"
+          heightButtom="10%"
+          onClick={() => console.log('click')}
+        >
+          AGENDAR UNA CITA
+        </ButtonContact>
+      </ContentTitle>
 
-          <ButtonContact
-            widthButton="40%"
-            heightButtom="15%"
-            onClick={() => console.log('click')}
-          >
-            AGENDAR UNA CITA
-          </ButtonContact>
-        </ContentTitle>
-
-        <ContentImageBackBackground>
-          <ContentImageBackground>
-            <Image
-              src="https://raw.githubusercontent.com/edisonAlbaSarmiento/landing-page-in-next/main/src/static/images/BackgroundHeader.png"
-              alt="Picture of the author"
-              width={500}
-              height={500}
-            />
-          </ContentImageBackground>
-          <ContentImage>
+      <ContentImageBackBackground>
+        <ContentImage>
+          <Fade top>
             <Image
               src="https://raw.githubusercontent.com/edisonAlbaSarmiento/landing-page-in-next/main/src/static/images/BackgroundBack.png"
-              alt="Picture of the author"
+              alt="back image header"
               width={500}
-              height={500}
+              height={706}
             />
-          </ContentImage>
-        </ContentImageBackBackground>
-      </Content>
-    </>
+          </Fade>
+        </ContentImage>
+        <ContentImageBackground>
+          <Fade right>
+            <Image
+              src="https://raw.githubusercontent.com/edisonAlbaSarmiento/landing-page-in-next/main/src/static/images/BackgroundHeader.png"
+              alt="cellphone"
+              width={550}
+              height={620}
+            />
+          </Fade>
+        </ContentImageBackground>
+      </ContentImageBackBackground>
+    </Content>
   );
 }
 
