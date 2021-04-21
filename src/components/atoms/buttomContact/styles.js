@@ -18,4 +18,8 @@ export const Button = styled.button`
     background-color: rgb(123, 245, 177);
     color: ${(props) => props.theme.color.blueBackground};
   }
+  @media (max-width: 768px) {
+    width: 60%;
+    height: 10%;
+  }
 `;

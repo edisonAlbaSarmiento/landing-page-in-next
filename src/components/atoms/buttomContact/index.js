@@ -10,7 +10,6 @@ const ButtonContact = (props) => {
     fontSize,
     color,
   } = props;
-  console.log('disabled', disabled);
   return (
     <Button
       disabled={disabled}
@@ -26,7 +25,7 @@ const ButtonContact = (props) => {
 };
 
 ButtonContact.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
   widthButton: PropTypes.string,
@@ -39,6 +38,7 @@ ButtonContact.defaultProps = {
   disabled: false,
   color: 'white',
   fontSize: '16px',
+  textButtom: 'Test title',
 };
 
 export default ButtonContact;

@@ -12,8 +12,10 @@ import Image from 'next/image';
 import { Typography, ButtonContact } from 'components/atoms';
 import Fade from 'react-reveal/Fade';
 import Bounce from 'react-reveal/Bounce';
+import PropTypes from 'prop-types';
 
 function ContentHeader(props) {
+  const { textTitle, subTitle, textButtom, onClick } = props;
   return (
     <Content>
       <ContentTitle>
@@ -25,31 +27,24 @@ function ContentHeader(props) {
         />
         <Bounce left>
           <Typography variant="header">
-            <Title>Vivimos para transformar el futuro</Title>
+            <Title>{textTitle}</Title>
           </Typography>
           <Typography variant="title">
-            <SubTitle>
-              Construyendo ecosistemas digitales de alto impacto.
-            </SubTitle>
+            <SubTitle>{subTitle}</SubTitle>
           </Typography>
           <ContentButton>
             <Image
               src="https://raw.githubusercontent.com/edisonAlbaSarmiento/landing-page-in-next/main/src/static/images/teamImaginamos.png"
               alt="team imaginamos"
-              width={480}
-              height={100}
+              width={380}
+              height={80}
             />
           </ContentButton>
         </Bounce>
-        <ButtonContact
-          widthButton="30%"
-          heightButtom="10%"
-          onClick={() => console.log('click')}
-        >
-          AGENDAR UNA CITA
+        <ButtonContact widthButton="30%" heightButtom="10%" onClick={onClick}>
+          {textButtom}
         </ButtonContact>
       </ContentTitle>
-
       <ContentImageBackBackground>
         <ContentImage>
           <Fade top>
@@ -75,5 +70,19 @@ function ContentHeader(props) {
     </Content>
   );
 }
+
+ContentHeader.propTypes = {
+  textTitle: PropTypes.string,
+  subTitle: PropTypes.string,
+  textButtom: PropTypes.string,
+  onClick: PropTypes.func,
+};
+
+ContentHeader.defaultProps = {
+  textTitle: '',
+  subTitle: '',
+  textButtom: 'Test title',
+  onClick: () => {},
+};
 
 export default ContentHeader;

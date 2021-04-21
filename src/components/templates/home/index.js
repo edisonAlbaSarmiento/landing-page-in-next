@@ -4,26 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
-const useStyle = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    backgroundColor: '#f00',
-  },
-  paper: {
-    padding: theme.spacing(2),
-  },
-  container: {
-    height: '100vh',
-  },
-  sideNav: {},
-  banner: {},
-  content: {},
-  rightPanel: {},
-}));
-
 const HomeTemplate = (props) => {
-  const style = useStyle();
-
   return (
     <Grid container direction="column" justify="flex-start" alignItems="center">
       {props.header}
