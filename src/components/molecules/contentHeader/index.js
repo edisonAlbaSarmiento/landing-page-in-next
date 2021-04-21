@@ -7,24 +7,28 @@ import {
   Title,
   SubTitle,
   ContentButton,
+  ContainerIcon,
 } from './styles';
 import Image from 'next/image';
 import { Typography, ButtonContact } from 'components/atoms';
 import Fade from 'react-reveal/Fade';
 import Bounce from 'react-reveal/Bounce';
 import PropTypes from 'prop-types';
-
+import {
+  IconImaginamos,
+  IconRappi,
+  IconGrability,
+  IconMerlin,
+  IconChiper,
+} from '../../../static/icons';
 function ContentHeader(props) {
   const { textTitle, subTitle, textButtom, onClick } = props;
   return (
     <Content>
       <ContentTitle>
-        <Image
-          src="https://raw.githubusercontent.com/edisonAlbaSarmiento/landing-page-in-next/main/src/static/images/iconImaginamos.png"
-          alt="Picture of the author"
-          width={200}
-          height={60}
-        />
+        <ContainerIcon>
+          <IconImaginamos />
+        </ContainerIcon>
         <Bounce left>
           <Typography variant="header">
             <Title>{textTitle}</Title>
@@ -33,12 +37,10 @@ function ContentHeader(props) {
             <SubTitle>{subTitle}</SubTitle>
           </Typography>
           <ContentButton>
-            <Image
-              src="https://raw.githubusercontent.com/edisonAlbaSarmiento/landing-page-in-next/main/src/static/images/teamImaginamos.png"
-              alt="team imaginamos"
-              width={380}
-              height={80}
-            />
+            <IconRappi />
+            <IconGrability />
+            <IconMerlin />
+            <IconChiper />
           </ContentButton>
         </Bounce>
         <ButtonContact widthButton="30%" heightButtom="10%" onClick={onClick}>

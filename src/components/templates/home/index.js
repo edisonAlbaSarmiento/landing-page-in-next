@@ -6,9 +6,24 @@ import Grid from '@material-ui/core/Grid';
 
 const HomeTemplate = (props) => {
   return (
-    <Grid container direction="column" justify="flex-start" alignItems="center">
-      {props.header}
-    </Grid>
+    <>
+      <Grid
+        container
+        direction="column"
+        justify="flex-start"
+        alignItems="center"
+      >
+        {props.header}
+      </Grid>
+      <Grid
+        container
+        direction="column"
+        justify="flex-start"
+        alignItems="center"
+      >
+        {props.informationPage}
+      </Grid>
+    </>
     // <div className={style.root}>
     //   <Paper className={style.paper}>
     //     <Grid container className={style.container} spacing={2}>

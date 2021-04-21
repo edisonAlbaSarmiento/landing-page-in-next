@@ -54,3 +54,8 @@ export const ContentButton = styled.div`
   width: 100%;
   padding-bottom: 5%;
 `;
+
+export const ContainerIcon = styled.div`
+  width: 100%;
+  height: 5%;
+`;
