@@ -9,8 +9,11 @@ const ButtonContact = (props) => {
     onClick,
     fontSize,
     color,
+    backgroundColorButton,
+    borderColor,
+    isSelect,
+    borderRadius,
   } = props;
-  console.log('disabled', disabled);
   return (
     <Button
       disabled={disabled}
@@ -18,7 +21,11 @@ const ButtonContact = (props) => {
       widthButton={widthButton}
       heightButtom={heightButtom}
       fontSize={fontSize}
+      backgroundColorButton={backgroundColorButton}
       color={color}
+      borderColor={borderColor}
+      isSelect={isSelect}
+      borderRadius={borderRadius}
     >
       {props.children}
     </Button>
@@ -26,19 +33,28 @@ const ButtonContact = (props) => {
 };
 
 ButtonContact.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
   widthButton: PropTypes.string,
   heightButtom: PropTypes.string,
   color: PropTypes.string,
   fontSize: PropTypes.string,
+  backgroundColorButton: PropTypes.string,
+  borderColor: PropTypes.string,
+  isSelect: PropTypes.bool,
+  borderRadius: PropTypes.string,
 };
 
 ButtonContact.defaultProps = {
   disabled: false,
   color: 'white',
   fontSize: '16px',
+  textButtom: 'Test title',
+  backgroundColorButton: 'transparent',
+  borderColor: 'white',
+  isSelect: false,
+  borderRadius: '5px',
 };
 
 export default ButtonContact;

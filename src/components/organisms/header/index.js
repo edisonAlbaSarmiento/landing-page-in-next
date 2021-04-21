@@ -1,36 +1,27 @@
 import { ContentOrganism } from './styles';
-import { useRouter } from 'next/router';
 import { ContentHeader } from '../../molecules';
+import PropTypes from 'prop-types';
 
-export default function Header() {
+function Header(props) {
+  const { textTitle, subTitle, textButtom, onClick } = props;
+
   return (
     <ContentOrganism>
-      {/* <Link href="/">Home</Link>
-      <Link href="/about-us">About</Link> */}
-      <ContentHeader />
+      <ContentHeader
+        textTitle={textTitle}
+        subTitle={subTitle}
+        textButtom={textButtom}
+        onClick={onClick}
+      />
     </ContentOrganism>
   );
 }
 
-const Link = ({ children, href }) => {
-  const router = useRouter();
-  return (
-    <a
-      href="#"
-      onClick={(e) => {
-        e.preventDefault();
-        // typically you want to use `next/link` for this usecase
-        // but this example shows how you can also access the router
-        // and use it manually
-        router.push(href);
-      }}
-    >
-      {children}
-      <style jsx>{`
-        a {
-          margin-right: 10px;
-        }
-      `}</style>
-    </a>
-  );
+ContentHeader.propTypes = {
+  textTitle: PropTypes.string.isRequired,
+  subTitle: PropTypes.string.isRequired,
+  textButtom: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
+
+export default Header;

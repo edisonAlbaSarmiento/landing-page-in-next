@@ -9,7 +9,7 @@ export const Content = styled.div`
 export const ContentTitle = styled.div`
   width: 100%;
   background-color: ${(props) => props.theme.color.blueBackground};
-  padding: 3.3%;
+  padding: ${(props) => props.theme.padding.paddingSmall};
 `;
 
 export const ContentImageBackBackground = styled.div`
@@ -17,17 +17,14 @@ export const ContentImageBackBackground = styled.div`
   display: flex;
   justify-content: flex-end;
   position: relative;
-  /* @media (min-width: 800px) {
-    width: 100%;
-  } */
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const ContentImage = styled.div`
   position: relative;
   left: 12%;
-  /* @media (min-width: 800px) {
-    left: 20%;
-  } */
 `;
 
 export const ContentImageBackground = styled.div`
@@ -39,9 +36,6 @@ export const ContentImageBackground = styled.div`
   animation-delay: 0ms;
   animation-iteration-count: 1;
   opacity: 1;
-  /* @media (min-width: 800px) {
-    top: 21.4%;
-  } */
 `;
 
 export const Title = styled.p`
@@ -59,4 +53,9 @@ export const SubTitle = styled.p`
 export const ContentButton = styled.div`
   width: 100%;
   padding-bottom: 5%;
+`;
+
+export const ContainerIcon = styled.div`
+  width: 100%;
+  height: 5%;
 `;

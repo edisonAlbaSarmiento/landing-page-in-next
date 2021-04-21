@@ -1,5 +1,10 @@
 import { HomeTemplate } from 'components/templates';
-import { ContenForm, AddEventBanner, Header } from 'components/organisms';
+import {
+  ContenForm,
+  AddEventBanner,
+  Header,
+  CasesSuccess,
+} from 'components/organisms';
 import Link from 'next/link';
 import Head from 'next/head';
 
@@ -47,28 +52,15 @@ function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HomeTemplate
-        header={<Header />}
-        informationPage={
-          <AddEventBanner
-            date={
-              eventDataList.length > 0
-                ? eventDataList[0].date
-                : '12:12:12 12/12/12'
-            }
-            title={
-              eventDataList.length > 0
-                ? eventDataList[0].title
-                : 'torybook Event 102'
-            }
-            description={
-              eventDataList.length > 0
-                ? eventDataList[0].description
-                : 'Event description 10'
-            }
-            type={eventDataList.length > 0 ? eventDataList[0].type : 'Reminder'}
-            onSubmit={handleAddEvent}
+        header={
+          <Header
+            textTitle="Vivimos para transformar el futuro"
+            subTitle="Construyendo ecosistemas digitales de alto impacto."
+            textButtom="AGENDAR UNA CITA"
+            onClick={() => console.log('click Pages')}
           />
         }
+        informationPage={<CasesSuccess />}
         about={
           <ContenForm title="Upcoming Event" eventDataList={eventDataList} />
         }

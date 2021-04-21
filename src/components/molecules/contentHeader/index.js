@@ -7,49 +7,53 @@ import {
   Title,
   SubTitle,
   ContentButton,
+  ContainerIcon,
 } from './styles';
 import Image from 'next/image';
 import { Typography, ButtonContact } from 'components/atoms';
 import Fade from 'react-reveal/Fade';
 import Bounce from 'react-reveal/Bounce';
-
+import PropTypes from 'prop-types';
+import {
+  IconImaginamos,
+  IconRappi,
+  IconGrability,
+  IconMerlin,
+  IconChiper,
+} from '../../../static/icons';
 function ContentHeader(props) {
+  const { textTitle, subTitle, textButtom, onClick } = props;
   return (
     <Content>
       <ContentTitle>
-        <Image
-          src="https://raw.githubusercontent.com/edisonAlbaSarmiento/landing-page-in-next/main/src/static/images/iconImaginamos.png"
-          alt="Picture of the author"
-          width={200}
-          height={60}
-        />
+        <ContainerIcon>
+          <IconImaginamos />
+        </ContainerIcon>
         <Bounce left>
           <Typography variant="header">
-            <Title>Vivimos para transformar el futuro</Title>
+            <Title>{textTitle}</Title>
           </Typography>
           <Typography variant="title">
-            <SubTitle>
-              Construyendo ecosistemas digitales de alto impacto.
-            </SubTitle>
+            <SubTitle>{subTitle}</SubTitle>
           </Typography>
           <ContentButton>
-            <Image
-              src="https://raw.githubusercontent.com/edisonAlbaSarmiento/landing-page-in-next/main/src/static/images/teamImaginamos.png"
-              alt="team imaginamos"
-              width={480}
-              height={100}
-            />
+            <IconRappi />
+            <IconGrability />
+            <IconMerlin />
+            <IconChiper />
           </ContentButton>
         </Bounce>
         <ButtonContact
           widthButton="30%"
           heightButtom="10%"
-          onClick={() => console.log('click')}
+          onClick={onClick}
+          backgroundColorButton="transparent"
+          color="#FFFFFF"
+          borderColor="#7bf5b1"
         >
-          AGENDAR UNA CITA
+          {textButtom}
         </ButtonContact>
       </ContentTitle>
-
       <ContentImageBackBackground>
         <ContentImage>
           <Fade top>
@@ -75,5 +79,19 @@ function ContentHeader(props) {
     </Content>
   );
 }
+
+ContentHeader.propTypes = {
+  textTitle: PropTypes.string,
+  subTitle: PropTypes.string,
+  textButtom: PropTypes.string,
+  onClick: PropTypes.func,
+};
+
+ContentHeader.defaultProps = {
+  textTitle: '',
+  subTitle: '',
+  textButtom: 'Test title',
+  onClick: () => {},
+};
 
 export default ContentHeader;
