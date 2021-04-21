@@ -1,6 +1,6 @@
 function IconCaseRappi() {
   return (
-    <svg width="50" height="16" viewBox="0 0 50 16">
+    <svg width="100%" height="100%" viewBox="0 0 50 16">
       <g
         fill="#FFF"
         fill-opacity="0.5"

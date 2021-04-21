@@ -1,6 +1,6 @@
 function IconCaseGrability() {
   return (
-    <svg width="23" height="30" viewBox="0 -5 23 36">
+    <svg width="100%" height="70%" viewBox="0 -5 23 36">
       <g
         fill="#FFF"
         fill-opacity="0.5"

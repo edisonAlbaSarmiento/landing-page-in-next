@@ -1,6 +1,6 @@
 function IconCaseChiper() {
   return (
-    <svg width="22" height="36" viewBox="0 0 22 36">
+    <svg width="1005" height="70%" viewBox="0 0 22 36">
       <g
         fill="#FFF"
         fill-opacity="0.5"

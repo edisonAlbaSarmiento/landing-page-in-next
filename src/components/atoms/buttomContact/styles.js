@@ -3,20 +3,23 @@ import styled from 'styled-components';
 export const Button = styled.button`
   width: ${(props) => props.widthButton};
   height: ${(props) => props.heightButtom};
-  border: 3px solid rgb(123, 245, 177);
-  border-radius: 5px;
+  border: ${(props) => (props.isSelect ? '4px ' : '3px')} solid
+    ${(props) => props.borderColor};
+  border-radius: ${(props) => props.borderRadius};
   font-size: 16px;
-  color: ${(props) => (props.color ? props.color : rgb(255, 255, 255))};
+  color: ${(props) => props.color};
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
+  background-color: ${(props) =>
+    props.isSelect ? 'transparent' : props.backgroundColorButton};
   font-weight: bold;
   outline: initial;
   cursor: pointer;
   &:hover {
-    background-color: rgb(123, 245, 177);
-    color: ${(props) => props.theme.color.blueBackground};
+    background-color: ${(props) =>
+      props.isSelect ? props.backgroundColorButton : '#7bf5b1'};
+    color: ${(props) => props.isSelect && props.theme.color.blueBackground};
   }
   @media (max-width: 768px) {
     width: 60%;

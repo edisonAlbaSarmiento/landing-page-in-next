@@ -9,6 +9,10 @@ const ButtonContact = (props) => {
     onClick,
     fontSize,
     color,
+    backgroundColorButton,
+    borderColor,
+    isSelect,
+    borderRadius,
   } = props;
   return (
     <Button
@@ -17,7 +21,11 @@ const ButtonContact = (props) => {
       widthButton={widthButton}
       heightButtom={heightButtom}
       fontSize={fontSize}
+      backgroundColorButton={backgroundColorButton}
       color={color}
+      borderColor={borderColor}
+      isSelect={isSelect}
+      borderRadius={borderRadius}
     >
       {props.children}
     </Button>
@@ -32,6 +40,10 @@ ButtonContact.propTypes = {
   heightButtom: PropTypes.string,
   color: PropTypes.string,
   fontSize: PropTypes.string,
+  backgroundColorButton: PropTypes.string,
+  borderColor: PropTypes.string,
+  isSelect: PropTypes.bool,
+  borderRadius: PropTypes.string,
 };
 
 ButtonContact.defaultProps = {
@@ -39,6 +51,10 @@ ButtonContact.defaultProps = {
   color: 'white',
   fontSize: '16px',
   textButtom: 'Test title',
+  backgroundColorButton: 'transparent',
+  borderColor: 'white',
+  isSelect: false,
+  borderRadius: '5px',
 };
 
 export default ButtonContact;

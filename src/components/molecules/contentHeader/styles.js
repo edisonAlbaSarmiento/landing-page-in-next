@@ -9,7 +9,7 @@ export const Content = styled.div`
 export const ContentTitle = styled.div`
   width: 100%;
   background-color: ${(props) => props.theme.color.blueBackground};
-  padding: 3.3%;
+  padding: ${(props) => props.theme.padding.paddingSmall};
 `;
 
 export const ContentImageBackBackground = styled.div`

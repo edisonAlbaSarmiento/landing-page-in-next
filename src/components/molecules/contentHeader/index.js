@@ -43,7 +43,14 @@ function ContentHeader(props) {
             <IconChiper />
           </ContentButton>
         </Bounce>
-        <ButtonContact widthButton="30%" heightButtom="10%" onClick={onClick}>
+        <ButtonContact
+          widthButton="30%"
+          heightButtom="10%"
+          onClick={onClick}
+          backgroundColorButton="transparent"
+          color="#FFFFFF"
+          borderColor="#7bf5b1"
+        >
           {textButtom}
         </ButtonContact>
       </ContentTitle>
