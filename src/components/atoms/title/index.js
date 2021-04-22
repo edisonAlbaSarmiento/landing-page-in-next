@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 const TitleComponet = (props) => {
   const { children, color, variant, fontSize, marginText } = props;
-  console.log('fontSize', fontSize);
   return (
     <Title
       color={color}
