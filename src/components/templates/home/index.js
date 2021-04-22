@@ -1,7 +1,4 @@
 import PropTypes from 'prop-types';
-
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
 const HomeTemplate = (props) => {
@@ -47,13 +44,13 @@ const HomeTemplate = (props) => {
   );
 };
 
+HomeTemplate.defaultProps = {};
+
 HomeTemplate.propTypes = {
   sideNav: PropTypes.element.isRequired,
   rightPanel: PropTypes.element.isRequired,
   banner: PropTypes.element.isRequired,
   content: PropTypes.element.isRequired,
 };
-
-HomeTemplate.defaultProps = {};
 
 export default HomeTemplate;

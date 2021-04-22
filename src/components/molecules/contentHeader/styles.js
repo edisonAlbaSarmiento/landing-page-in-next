@@ -24,7 +24,6 @@ export const ContentImageBackBackground = styled.div`
 
 export const ContentImage = styled.div`
   position: relative;
-  left: 12%;
 `;
 
 export const ContentImageBackground = styled.div`
@@ -36,18 +35,6 @@ export const ContentImageBackground = styled.div`
   animation-delay: 0ms;
   animation-iteration-count: 1;
   opacity: 1;
-`;
-
-export const Title = styled.p`
-  color: rgb(0, 255, 176);
-  font-size: 58px;
-  font-weight: bold;
-`;
-
-export const SubTitle = styled.p`
-  color: rgb(255, 255, 255);
-  font-size: 25px;
-  font-weight: normal;
 `;
 
 export const ContentButton = styled.div`

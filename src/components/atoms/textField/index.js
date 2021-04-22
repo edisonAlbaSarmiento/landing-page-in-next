@@ -18,6 +18,13 @@ const TextFieldComponent = (props) => (
   />
 );
 
+TextFieldComponent.defaultProps = {
+  value: '',
+  required: false,
+  error: false,
+  errorMessage: '',
+};
+
 TextFieldComponent.propTypes = {
   label: PropTypes.string.isRequired,
   value: PropTypes.string,
@@ -25,13 +32,6 @@ TextFieldComponent.propTypes = {
   onChange: PropTypes.func,
   error: PropTypes.bool,
   errorMessage: PropTypes.string,
-};
-
-TextFieldComponent.defaultProps = {
-  value: '',
-  required: false,
-  error: false,
-  errorMessage: '',
 };
 
 export default TextFieldComponent;

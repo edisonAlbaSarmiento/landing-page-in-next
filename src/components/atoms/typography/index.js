@@ -21,13 +21,13 @@ const TypographyComponent = (props) => (
   </Typography>
 );
 
+TypographyComponent.defaultProps = {
+  variant: 'body',
+};
+
 TypographyComponent.propTypes = {
   children: PropTypes.string.isRequired,
   variant: PropTypes.oneOf(['header', 'title', 'subtitle', 'body']),
-};
-
-TypographyComponent.defaultProps = {
-  variant: 'body',
 };
 
 export default TypographyComponent;

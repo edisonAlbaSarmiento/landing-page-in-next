@@ -14,14 +14,14 @@ const ButtonComponent = (props) => (
   </Button>
 );
 
+ButtonComponent.defaultProps = {
+  disabled: false,
+};
+
 ButtonComponent.propTypes = {
   title: PropTypes.string.isRequired,
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
-};
-
-ButtonComponent.defaultProps = {
-  disabled: false,
 };
 
 export default ButtonComponent;

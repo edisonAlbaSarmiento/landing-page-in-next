@@ -4,13 +4,11 @@ import {
   ContentImage,
   ContentImageBackBackground,
   ContentImageBackground,
-  Title,
-  SubTitle,
   ContentButton,
   ContainerIcon,
 } from './styles';
 import Image from 'next/image';
-import { Typography, ButtonContact } from 'components/atoms';
+import { ButtonContact, TitleComponet } from 'components/atoms';
 import Fade from 'react-reveal/Fade';
 import Bounce from 'react-reveal/Bounce';
 import PropTypes from 'prop-types';
@@ -30,12 +28,17 @@ function ContentHeader(props) {
           <IconImaginamos />
         </ContainerIcon>
         <Bounce left>
-          <Typography variant="header">
-            <Title>{textTitle}</Title>
-          </Typography>
-          <Typography variant="title">
-            <SubTitle>{subTitle}</SubTitle>
-          </Typography>
+          <TitleComponet variant="title" marginText="revert" color="#7bf5b1">
+            {textTitle}
+          </TitleComponet>
+          <TitleComponet
+            variant="subtitle"
+            fontSize="25px"
+            marginText="20px 0px 40.5px"
+            color="#FFFFFF"
+          >
+            {subTitle}
+          </TitleComponet>
           <ContentButton>
             <IconRappi />
             <IconGrability />
@@ -50,6 +53,7 @@ function ContentHeader(props) {
           backgroundColorButton="transparent"
           color="#FFFFFF"
           borderColor="#7bf5b1"
+          title
         >
           {textButtom}
         </ButtonContact>
@@ -60,7 +64,7 @@ function ContentHeader(props) {
             <Image
               src="https://raw.githubusercontent.com/edisonAlbaSarmiento/landing-page-in-next/main/src/static/images/BackgroundBack.png"
               alt="back image header"
-              width={500}
+              width={380}
               height={706}
             />
           </Fade>
@@ -80,18 +84,18 @@ function ContentHeader(props) {
   );
 }
 
-ContentHeader.propTypes = {
-  textTitle: PropTypes.string,
-  subTitle: PropTypes.string,
-  textButtom: PropTypes.string,
-  onClick: PropTypes.func,
-};
-
 ContentHeader.defaultProps = {
   textTitle: '',
   subTitle: '',
   textButtom: 'Test title',
   onClick: () => {},
+};
+
+ContentHeader.propTypes = {
+  textTitle: PropTypes.string,
+  subTitle: PropTypes.string,
+  textButtom: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default ContentHeader;

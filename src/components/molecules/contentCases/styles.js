@@ -1,16 +1,15 @@
 import styled from 'styled-components';
+import { bounceInLeft, bounceInRight } from 'react-animations';
+import { animation } from '../../../utils';
 
 export const ContainerMolecule = styled.div`
   width: 100%;
-  /* display: flex;
-  flex-direction: row; */
 `;
 
 export const ContentMain = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: brown;
 `;
 
 export const ContentButtonCases = styled.div`
@@ -23,9 +22,17 @@ export const ContentButton = styled.div`
 `;
 
 export const ContentTextCases = styled.div`
-  background-color: green;
   flex: 5;
+  padding-top: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
 `;
 export const ContentImageCases = styled.div`
-  background-color: blue;
+  animation: 2s ${animation(bounceInRight)};
+`;
+
+export const ContainInfo = styled.div`
+  width: 62%;
+  animation: 1s ${animation(bounceInLeft)};
+  padding-left: 2%;
 `;
