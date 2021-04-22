@@ -4,13 +4,11 @@ import {
   ContentImage,
   ContentImageBackBackground,
   ContentImageBackground,
-  Title,
-  SubTitle,
   ContentButton,
   ContainerIcon,
 } from './styles';
 import Image from 'next/image';
-import { Typography, ButtonContact } from 'components/atoms';
+import { ButtonContact, TitleComponet } from 'components/atoms';
 import Fade from 'react-reveal/Fade';
 import Bounce from 'react-reveal/Bounce';
 import PropTypes from 'prop-types';
@@ -30,12 +28,16 @@ function ContentHeader(props) {
           <IconImaginamos />
         </ContainerIcon>
         <Bounce left>
-          <Typography variant="header">
-            <Title>{textTitle}</Title>
-          </Typography>
-          <Typography variant="title">
-            <SubTitle>{subTitle}</SubTitle>
-          </Typography>
+          <TitleComponet variant="title" marginText="revert">
+            {textTitle}
+          </TitleComponet>
+          <TitleComponet
+            variant="subtitle"
+            fontSize="25px"
+            marginText="20px 0px 40.5px"
+          >
+            {subTitle}
+          </TitleComponet>
           <ContentButton>
             <IconRappi />
             <IconGrability />

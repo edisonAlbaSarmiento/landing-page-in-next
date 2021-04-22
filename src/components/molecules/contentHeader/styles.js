@@ -38,18 +38,6 @@ export const ContentImageBackground = styled.div`
   opacity: 1;
 `;
 
-export const Title = styled.p`
-  color: rgb(0, 255, 176);
-  font-size: 58px;
-  font-weight: bold;
-`;
-
-export const SubTitle = styled.p`
-  color: rgb(255, 255, 255);
-  font-size: 25px;
-  font-weight: normal;
-`;
-
 export const ContentButton = styled.div`
   width: 100%;
   padding-bottom: 5%;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Typography, ButtonContact } from '../../atoms';
+import { ButtonContact, TitleComponet } from '../../atoms';
 import {
   IconCaseGrability,
   IconCaseChiper,
@@ -22,11 +22,12 @@ function ContentCases(params) {
   console.info('useItem', [useItem, dataCases]);
   return (
     <ContainerMolecule>
-      <Typography variant="header">Casos de estudio</Typography>
-      <Typography variant="title">
+      <TitleComponet variant="title" fontSize="56px">
+        Casos de estudio
+      </TitleComponet>
+      <TitleComponet variant="subtitle" fontSize="25px" marginText="revert">
         Estos son algunos de nuestros casos de éxito
-      </Typography>
-
+      </TitleComponet>
       <ContentMain>
         <ContentButtonCases>
           <ContentButton>
@@ -74,8 +75,20 @@ function ContentCases(params) {
               <>
                 <ContentTextCases>
                   {item.iconImage}
-                  <Typography variant="header">{item.titleCase}</Typography>
-                  <Typography variant="title">{item.subTitleCase}</Typography>
+                  <TitleComponet
+                    variant="title"
+                    fontSize="36px"
+                    marginText="revert"
+                  >
+                    {item.titleCase}
+                  </TitleComponet>
+                  <TitleComponet
+                    variant="subtitle"
+                    fontSize="25px"
+                    marginText="revert"
+                  >
+                    {item.subTitleCase}
+                  </TitleComponet>
                 </ContentTextCases>
                 <ContentImageCases>
                   <Image
