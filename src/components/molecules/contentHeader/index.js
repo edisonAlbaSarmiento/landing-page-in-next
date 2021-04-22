@@ -28,13 +28,14 @@ function ContentHeader(props) {
           <IconImaginamos />
         </ContainerIcon>
         <Bounce left>
-          <TitleComponet variant="title" marginText="revert">
+          <TitleComponet variant="title" marginText="revert" color="#7bf5b1">
             {textTitle}
           </TitleComponet>
           <TitleComponet
             variant="subtitle"
             fontSize="25px"
             marginText="20px 0px 40.5px"
+            color="#FFFFFF"
           >
             {subTitle}
           </TitleComponet>
@@ -52,6 +53,7 @@ function ContentHeader(props) {
           backgroundColorButton="transparent"
           color="#FFFFFF"
           borderColor="#7bf5b1"
+          title
         >
           {textButtom}
         </ButtonContact>
@@ -62,7 +64,7 @@ function ContentHeader(props) {
             <Image
               src="https://raw.githubusercontent.com/edisonAlbaSarmiento/landing-page-in-next/main/src/static/images/BackgroundBack.png"
               alt="back image header"
-              width={500}
+              width={380}
               height={706}
             />
           </Fade>
@@ -82,18 +84,18 @@ function ContentHeader(props) {
   );
 }
 
-ContentHeader.propTypes = {
-  textTitle: PropTypes.string,
-  subTitle: PropTypes.string,
-  textButtom: PropTypes.string,
-  onClick: PropTypes.func,
-};
-
 ContentHeader.defaultProps = {
   textTitle: '',
   subTitle: '',
   textButtom: 'Test title',
   onClick: () => {},
+};
+
+ContentHeader.propTypes = {
+  textTitle: PropTypes.string,
+  subTitle: PropTypes.string,
+  textButtom: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default ContentHeader;

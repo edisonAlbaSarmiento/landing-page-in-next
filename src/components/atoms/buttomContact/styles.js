@@ -12,13 +12,13 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   background-color: ${(props) =>
-    props.isSelect ? 'transparent' : props.backgroundColorButton};
+    props.isSelect ? props.backgroundColorButton : 'transparent'};
   font-weight: bold;
   outline: initial;
   cursor: pointer;
   &:hover {
     background-color: ${(props) =>
-      props.isSelect ? props.backgroundColorButton : '#7bf5b1'};
+      props.title ? '#7bf5b1' : props.backgroundColorButton};
     color: ${(props) => props.isSelect && props.theme.color.blueBackground};
   }
   @media (max-width: 768px) {

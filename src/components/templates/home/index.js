@@ -47,13 +47,13 @@ const HomeTemplate = (props) => {
   );
 };
 
+HomeTemplate.defaultProps = {};
+
 HomeTemplate.propTypes = {
   sideNav: PropTypes.element.isRequired,
   rightPanel: PropTypes.element.isRequired,
   banner: PropTypes.element.isRequired,
   content: PropTypes.element.isRequired,
 };
-
-HomeTemplate.defaultProps = {};
 
 export default HomeTemplate;

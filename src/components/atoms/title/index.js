@@ -16,17 +16,17 @@ const TitleComponet = (props) => {
   );
 };
 
+TitleComponet.defaultProps = {
+  color: '#7bf5b1',
+  marginText: '0px',
+};
+
 TitleComponet.propTypes = {
   children: PropTypes.string.isRequired,
   color: PropTypes.string,
   variant: PropTypes.oneOf(['title', 'subtitle']),
   fontSize: PropTypes.string,
   marginText: PropTypes.string,
-};
-
-TitleComponet.defaultProps = {
-  color: 'white',
-  marginText: '0px',
 };
 
 export default TitleComponet;

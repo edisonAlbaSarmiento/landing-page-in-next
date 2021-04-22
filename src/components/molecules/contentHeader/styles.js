@@ -24,7 +24,6 @@ export const ContentImageBackBackground = styled.div`
 
 export const ContentImage = styled.div`
   position: relative;
-  left: 12%;
 `;
 
 export const ContentImageBackground = styled.div`

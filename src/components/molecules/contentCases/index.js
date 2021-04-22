@@ -12,20 +12,32 @@ import {
   ContentTextCases,
   ContentImageCases,
   ContentButton,
+  ContainInfo,
 } from './styles';
 import Image from 'next/image';
 import dataCases from '../../../utils/dataCases';
 
 function ContentCases(params) {
   const [useItem, setItem] = useState(0);
+  const [activeItem, setActiveItem] = useState(false);
 
+  const changeState = (item, active) => {
+    console.info('changeState', [item, active, useItem]);
+    setActiveItem(active);
+    setItem(item);
+  };
   console.info('useItem', [useItem, dataCases]);
   return (
     <ContainerMolecule>
-      <TitleComponet variant="title" fontSize="56px">
+      <TitleComponet variant="title" fontSize="56px" color="#FFFFFF">
         Casos de estudio
       </TitleComponet>
-      <TitleComponet variant="subtitle" fontSize="25px" marginText="revert">
+      <TitleComponet
+        variant="subtitle"
+        fontSize="25px"
+        marginText="revert"
+        color="#FFFFFF"
+      >
         Estos son algunos de nuestros casos de éxito
       </TitleComponet>
       <ContentMain>
@@ -36,9 +48,9 @@ function ContentCases(params) {
               heightButtom="80px"
               backgroundColorButton="#FF2E4B"
               borderColor="#FFFF"
-              isSelect
+              isSelect={activeItem && useItem === 0}
               borderRadius="16px"
-              onClick={() => setItem(0)}
+              onClick={() => changeState(0, true)}
             >
               <IconCaseRappi />
             </ButtonContact>
@@ -50,7 +62,8 @@ function ContentCases(params) {
               backgroundColorButton="#F80135"
               borderColor="#FFFF"
               borderRadius="16px"
-              onClick={() => setItem(1)}
+              isSelect={activeItem && useItem === 1}
+              onClick={() => changeState(1, true)}
             >
               <IconCaseChiper />
             </ButtonContact>
@@ -62,7 +75,8 @@ function ContentCases(params) {
               backgroundColorButton="#05CE7C"
               borderColor="#FFFF"
               borderRadius="16px"
-              onClick={() => setItem(2)}
+              isSelect={activeItem && useItem === 2}
+              onClick={() => changeState(2, true)}
             >
               <IconCaseGrability />
             </ButtonContact>
@@ -74,28 +88,32 @@ function ContentCases(params) {
             return (
               <>
                 <ContentTextCases>
-                  {item.iconImage}
-                  <TitleComponet
-                    variant="title"
-                    fontSize="36px"
-                    marginText="revert"
-                  >
-                    {item.titleCase}
-                  </TitleComponet>
-                  <TitleComponet
-                    variant="subtitle"
-                    fontSize="25px"
-                    marginText="revert"
-                  >
-                    {item.subTitleCase}
-                  </TitleComponet>
+                  <ContainInfo>
+                    {item.iconImage}
+                    <TitleComponet
+                      variant="title"
+                      fontSize="36px"
+                      marginText="revert"
+                      color="#FFFFFF"
+                    >
+                      {item.titleCase}
+                    </TitleComponet>
+                    <TitleComponet
+                      variant="subtitle"
+                      fontSize="25px"
+                      marginText="revert"
+                      color="#FFFFFF"
+                    >
+                      {item.subTitleCase}
+                    </TitleComponet>
+                  </ContainInfo>
                 </ContentTextCases>
                 <ContentImageCases>
                   <Image
                     src={`${item.imageCase}`}
                     alt="imageCase"
                     width={400}
-                    height={400}
+                    height={350}
                   />
                 </ContentImageCases>
               </>
