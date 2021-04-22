@@ -25,6 +25,9 @@ export const ContentButton = styled.div`
 export const ContentTextCases = styled.div`
   background-color: green;
   flex: 5;
+  padding-top: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
 `;
 export const ContentImageCases = styled.div`
   background-color: blue;
