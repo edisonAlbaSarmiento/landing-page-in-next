@@ -6,4 +6,5 @@ export const Content = styled.div`
   padding-left: ${(props) => props.theme.padding.paddingSmall};
   padding-top: ${(props) => props.theme.padding.paddingSmall};
   padding-bottom: ${(props) => props.theme.padding.paddingSmall};
+  background-color: ${(props) => props.theme.color.blueBackground};
 `;
