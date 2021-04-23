@@ -87,10 +87,10 @@ function ContentCases(params) {
           {dataCases.map((item, index) => {
             if (useItem === index) {
               return (
-                <ContentTextImage>
-                  <ContentTextCases>
-                    <ContainInfo>
-                      <Bounce left>
+                <Bounce left>
+                  <ContentTextImage>
+                    <ContentTextCases>
+                      <ContainInfo>
                         {item.iconImage}
                         <TitleComponet
                           variant="title"
@@ -108,18 +108,18 @@ function ContentCases(params) {
                         >
                           {item.subTitleCase}
                         </TitleComponet>
-                      </Bounce>
-                    </ContainInfo>
-                  </ContentTextCases>
-                  <ContentImageCases>
-                    <Image
-                      src={`${item.imageCase}`}
-                      alt="imageCase"
-                      width={400}
-                      height={350}
-                    />
-                  </ContentImageCases>
-                </ContentTextImage>
+                      </ContainInfo>
+                    </ContentTextCases>
+                    <ContentImageCases>
+                      <Image
+                        src={`${item.imageCase}`}
+                        alt="imageCase"
+                        width={400}
+                        height={350}
+                      />
+                    </ContentImageCases>
+                  </ContentTextImage>
+                </Bounce>
               );
             }
           })}
