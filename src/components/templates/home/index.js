@@ -18,7 +18,23 @@ const HomeTemplate = (props) => {
         justify="flex-start"
         alignItems="center"
       >
+        {props.about}
+      </Grid>
+      <Grid
+        container
+        direction="column"
+        justify="flex-start"
+        alignItems="center"
+      >
         {props.informationPage}
+      </Grid>
+      <Grid
+        container
+        direction="column"
+        justify="flex-start"
+        alignItems="center"
+      >
+        {props.team}
       </Grid>
     </>
     // <div className={style.root}>

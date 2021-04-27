@@ -1,9 +1,10 @@
 import { HomeTemplate } from 'components/templates';
 import {
-  ContenForm,
   AddEventBanner,
   Header,
   CasesSuccess,
+  Make,
+  Team,
 } from 'components/organisms';
 import Head from 'next/head';
 
@@ -27,12 +28,20 @@ function Home() {
             onClick={() => console.log('click Pages')}
           />
         }
-        informationPage={<CasesSuccess />}
         about={
-          <ContenForm title="Upcoming Event" eventDataList={eventDataList} />
+          <Make
+            textTitle="¿Cómo lo hacemos?"
+            subTitle="Siendo una compañía centrada en Innovación Disruptiva, nos definimos como un equipo emprendedor e interdisciplinar que presta una solución 360º que lleva los KPI's de tu negocio a nuevos horizontes."
+          />
+        }
+        informationPage={<CasesSuccess />}
+        team={
+          <Team
+            textTitle="Nuestro equipo de emprendedores"
+            subTitle="El 60% del éxito para cualquier negocio o proyecto es el equipo. Por esto, nos rodeamos de grandes emprendedores que nos ayudan hacer posible nuestra visión."
+          />
         }
         casesStudy={<AddEventBanner validate onSubmit={handleAddEvent} />}
-        team={<AddEventBanner validate onSubmit={handleAddEvent} />}
         contact={<AddEventBanner validate onSubmit={handleAddEvent} />}
         footer={<AddEventBanner validate onSubmit={handleAddEvent} />}
       />
