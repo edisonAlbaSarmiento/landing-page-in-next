@@ -6,7 +6,7 @@ import { ContenForm, AddEventBanner } from 'components/organisms';
 const DummyView = () => (
   <div style={{ backgroundColor: '#adadad', height: '100vh' }}>
     <h1>
-      Welcome to{' '}
+      Welcome to Imaginamos TEST by Edison{' '}
       {/* <Link href={`/contact`}>
         <a>Contact</a>{' '}
       </Link>{' '} */}
