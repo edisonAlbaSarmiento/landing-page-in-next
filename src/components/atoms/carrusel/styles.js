@@ -1,10 +1,57 @@
 import styled from 'styled-components';
 
-export const ContentOrganism = styled.div`
+export const ContentCarrusel = styled.div`
   width: 100%;
-  height: 715px;
-  background-color: ${(props) => props.theme.color.blueBackground};
-  @media (max-width: 768px) {
-    height: 800px;
-  }
+  height: 360px;
+  display: flex;
+  justify-content: space-around;
+  background-color: red;
 `;
+
+export const ContentCard = styled.div`
+  width: 16%;
+  background-color: white;
+  border-radius: 3%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+`;
+
+export const ContentArrows = styled.div`
+  background-color: green;
+  display: flex;
+  margin: 8px 0px 0px 2%;
+  width: 10%;
+  justify-content: space-around;
+`;
+
+export const ContentArrowSecundary = styled.div`
+  background-color: ${(props) =>
+    props.currentSlide === 0 ? '#BDBEC0' : 'white'};
+  width: 54px;
+  height: 54px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ContentTitle = styled.div`
+  width: 92%;
+  /* background-color: ${(props) => props.theme.color.blueBackground}; */
+  padding: 8.3% 0 0 4.3%;
+`;
+
+export const ContentFooterCard = styled.div`
+  width: 100%;
+  height: 18%;
+  background-color: #f1f2f3;
+  padding-left: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+`;
+
+export const ContainerIcon = styled.div``;

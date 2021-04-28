@@ -1,5 +1,5 @@
 import { Content, ContentTitle } from './styles';
-import { TitleComponet } from 'components/atoms';
+import { TitleComponet, Carrusel } from 'components/atoms';
 import Bounce from 'react-reveal/Bounce';
 import PropTypes from 'prop-types';
 
@@ -21,6 +21,7 @@ function ContentMake(props) {
             {subTitle}
           </TitleComponet>
         </ContentTitle>
+        <Carrusel />
       </Bounce>
 
       {/* <img
