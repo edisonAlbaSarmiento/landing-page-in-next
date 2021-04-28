@@ -9,7 +9,7 @@ import {
 import Head from 'next/head';
 
 function Home() {
-  const eventDataList = [];
+  // const eventDataList = [];
   const handleAddEvent = () => {
     console.log('New Event Added');
   };
