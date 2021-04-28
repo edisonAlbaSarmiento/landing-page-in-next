@@ -17,7 +17,7 @@ function Header(props) {
   );
 }
 
-ContentHeader.propTypes = {
+Header.propTypes = {
   textTitle: PropTypes.string.isRequired,
   subTitle: PropTypes.string.isRequired,
   textButtom: PropTypes.string.isRequired,
