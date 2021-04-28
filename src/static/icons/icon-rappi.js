@@ -7,7 +7,7 @@ function IconRappi() {
         <path d="M0 0.000269438139L13.0417952 0.000269438139 13.0417952 15.6977912 0 15.6977912z"></path>
         <path d="M0.0163879748 0.000888418826L3.34993481 0.000888418826 3.34993481 3.44077675 0.0163879748 3.44077675z"></path>
       </defs>
-      <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+      <g fill="none" stroke="none">
         <g transform="translate(-24 -628) translate(24 628) translate(36.14)">
           <path
             fill="#DF6F6E"

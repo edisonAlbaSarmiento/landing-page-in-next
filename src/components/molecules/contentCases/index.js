@@ -87,7 +87,7 @@ function ContentCases(params) {
           {dataCases.map((item, index) => {
             if (useItem === index) {
               return (
-                <Bounce left>
+                <Bounce left key={index}>
                   <ContentTextImage>
                     <ContentTextCases>
                       <ContainInfo>
