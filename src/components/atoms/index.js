@@ -3,6 +3,7 @@ import ButtonComponent from './buttom';
 import TextFieldComponent from './textField';
 import ButtonContact from './buttomContact';
 import TitleComponet from './title';
+import Carrusel from './carrusel';
 
 export {
   Typography,
@@ -10,4 +11,5 @@ export {
   TextFieldComponent,
   ButtonContact,
   TitleComponet,
+  Carrusel,
 };
