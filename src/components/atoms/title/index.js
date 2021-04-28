@@ -2,7 +2,7 @@ import { Title } from './styles';
 import PropTypes from 'prop-types';
 
 const TitleComponet = (props) => {
-  const { children, color, variant, fontSize, marginText } = props;
+  const { color, variant, fontSize, marginText } = props;
   return (
     <Title
       color={color}
@@ -10,7 +10,7 @@ const TitleComponet = (props) => {
       fontSize={fontSize}
       marginText={marginText}
     >
-      {children}
+      {props.children}
     </Title>
   );
 };
@@ -21,7 +21,6 @@ TitleComponet.defaultProps = {
 };
 
 TitleComponet.propTypes = {
-  children: PropTypes.string.isRequired,
   color: PropTypes.string,
   variant: PropTypes.oneOf(['title', 'subtitle']),
   fontSize: PropTypes.string,

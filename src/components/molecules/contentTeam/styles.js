@@ -2,8 +2,10 @@ import styled from 'styled-components';
 
 export const Content = styled.div`
   width: 100%;
-  background-color: yellow;
-
+  background-color: red;
+  background-image: url('https://raw.githubusercontent.com/CristianPaez/ImageEmp/master/ImagesGenerals/Group9.jpeg');
+  background-position: right;
+  background-repeat: no-repeat;
   height: 64%;
 `;
 
