@@ -27,7 +27,7 @@ const ButtonContact = (props) => {
       borderColor={borderColor}
       isSelect={isSelect}
       borderRadius={borderRadius}
-      title={title}
+      title={title ? 0 : 1}
     >
       {props.children}
     </Button>

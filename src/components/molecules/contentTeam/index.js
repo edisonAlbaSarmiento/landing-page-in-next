@@ -1,4 +1,4 @@
-import { Content, ContentTitle, ContainerIcon } from './styles';
+import { Content, ContentTitle } from './styles';
 import { TitleComponet } from 'components/atoms';
 import PropTypes from 'prop-types';
 

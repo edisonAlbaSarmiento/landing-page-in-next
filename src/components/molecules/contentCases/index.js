@@ -18,7 +18,6 @@ import {
 import Image from 'next/image';
 import dataCases from '../../../utils/dataCases';
 import Bounce from 'react-reveal/Bounce';
-import Fade from 'react-reveal/Fade';
 
 function ContentCases(params) {
   const [useItem, setItem] = useState(0);
@@ -87,7 +86,7 @@ function ContentCases(params) {
           {dataCases.map((item, index) => {
             if (useItem === index) {
               return (
-                <Bounce left>
+                <Bounce left key={index}>
                   <ContentTextImage>
                     <ContentTextCases>
                       <ContainInfo>
