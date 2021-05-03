@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
 import { TitleComponet } from 'components/atoms';
+import Carousel, { consts } from 'react-elastic-carousel';
 
 import {
   ContentCarrusel,
@@ -15,76 +16,218 @@ import {
 } from './styles';
 import { IconBusiness } from '../../../static/icons';
 
+const breakPoints = [
+  { width: 1, itemsToShow: 1 },
+  { width: 550, itemsToShow: 2, itemsToScroll: 2 },
+  { width: 768, itemsToShow: 3 },
+  { width: 1200, itemsToShow: 4 },
+];
+
+const Arrows = ({ type, onClick, isEdge }) => {
+  console.info('isEdge', [type, isEdge, consts, onClick]);
+
+  const pointer = type === consts.PREV ? <ArrowLeft /> : <ArrowRight />;
+  return (
+    <ContentArrows>
+      <>
+        <ContentArrowSecundary
+          onClick={onClick}
+          currentSlide={type === consts.NEXT}
+        >
+          <ArrowLeft />
+        </ContentArrowSecundary>
+
+        <ContentArrowSecundary
+          onClick={onClick}
+          currentSlide={type === consts.PREV}
+        >
+          <ArrowRight />
+        </ContentArrowSecundary>
+      </>
+    </ContentArrows>
+  );
+};
 const Carrusel = (props) => {
   //   const { color, variant, fontSize, marginText } = props;
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [sliderRef, slider] = useKeenSlider({
-    initial: 0,
-    slideChanged(s) {
-      setCurrentSlide(s.details().relativeSlide);
-    },
-  });
+  // const [currentSlide, setCurrentSlide] = useState(0);
+  // const [sliderRef, slider] = useKeenSlider({
+  //   initial: 0,
+  //   slideChanged(s) {
+  //     setCurrentSlide(s.details().relativeSlide);
+  //   },
+  // });
   const showText = false;
   return (
     <>
-      <ContentCarrusel ref={sliderRef}>
-        <ContentCard>
-          <ContentTitle>
-            <IconBusiness />
-            <TitleComponet
-              variant="title"
-              color="#0063FB"
-              fontSize="12px"
-              marginText="25px auto 8px"
-            >
-              Consultoría
-            </TitleComponet>
-            <TitleComponet
-              variant="title"
-              color="#272727"
-              fontSize="30px"
-              marginText="4px auto 0px"
-            >
-              Negocios Digitales
-            </TitleComponet>
-            <TitleComponet
-              variant="subtitle"
-              color="#818181"
-              fontSize="16px"
-              marginText="16px auto 0px"
-            >
-              Construimos el futuro a través de modelos de negocio digitales
-              disruptivos.
-            </TitleComponet>
-          </ContentTitle>
-          <ContentFooterCard>
-            {showText && <p>Ver en linkedin</p>}
-          </ContentFooterCard>
-        </ContentCard>
-        <ContentCard>2</ContentCard>
-        <ContentCard>3</ContentCard>
-        <ContentCard>4</ContentCard>
-        <ContentCard>5</ContentCard>
+      <ContentCarrusel>
+        <Carousel breakPoints={breakPoints} renderArrow={Arrows}>
+          <ContentCard>
+            <ContentTitle>
+              <IconBusiness />
+              <TitleComponet
+                variant="title"
+                color="#0063FB"
+                fontSize="12px"
+                marginText="25px auto 8px"
+              >
+                Consultoría
+              </TitleComponet>
+              <TitleComponet
+                variant="title"
+                color="#272727"
+                fontSize="30px"
+                marginText="4px auto 0px"
+              >
+                Negocios Digitales
+              </TitleComponet>
+              <TitleComponet
+                variant="subtitle"
+                color="#818181"
+                fontSize="16px"
+                marginText="16px auto 0px"
+              >
+                Construimos el futuro a través de modelos de negocio digitales
+                disruptivos.
+              </TitleComponet>
+            </ContentTitle>
+            <ContentFooterCard>
+              {showText && <p>Ver en linkedin</p>}
+            </ContentFooterCard>
+          </ContentCard>
+          <ContentCard>
+            <ContentTitle>
+              <IconBusiness />
+              <TitleComponet
+                variant="title"
+                color="#0063FB"
+                fontSize="12px"
+                marginText="25px auto 8px"
+              >
+                Consultoría
+              </TitleComponet>
+              <TitleComponet
+                variant="title"
+                color="#272727"
+                fontSize="30px"
+                marginText="4px auto 0px"
+              >
+                Negocios Digitales
+              </TitleComponet>
+              <TitleComponet
+                variant="subtitle"
+                color="#818181"
+                fontSize="16px"
+                marginText="16px auto 0px"
+              >
+                Construimos el futuro a través de modelos de negocio digitales
+                disruptivos.
+              </TitleComponet>
+            </ContentTitle>
+            <ContentFooterCard>
+              {showText && <p>Ver en linkedin</p>}
+            </ContentFooterCard>
+          </ContentCard>
+          <ContentCard>
+            <ContentTitle>
+              <IconBusiness />
+              <TitleComponet
+                variant="title"
+                color="#0063FB"
+                fontSize="12px"
+                marginText="25px auto 8px"
+              >
+                Consultoría
+              </TitleComponet>
+              <TitleComponet
+                variant="title"
+                color="#272727"
+                fontSize="30px"
+                marginText="4px auto 0px"
+              >
+                Negocios Digitales
+              </TitleComponet>
+              <TitleComponet
+                variant="subtitle"
+                color="#818181"
+                fontSize="16px"
+                marginText="16px auto 0px"
+              >
+                Construimos el futuro a través de modelos de negocio digitales
+                disruptivos.
+              </TitleComponet>
+            </ContentTitle>
+            <ContentFooterCard>
+              {showText && <p>Ver en linkedin</p>}
+            </ContentFooterCard>
+          </ContentCard>
+          <ContentCard>
+            <ContentTitle>
+              <IconBusiness />
+              <TitleComponet
+                variant="title"
+                color="#0063FB"
+                fontSize="12px"
+                marginText="25px auto 8px"
+              >
+                Consultoría
+              </TitleComponet>
+              <TitleComponet
+                variant="title"
+                color="#272727"
+                fontSize="30px"
+                marginText="4px auto 0px"
+              >
+                Negocios Digitales
+              </TitleComponet>
+              <TitleComponet
+                variant="subtitle"
+                color="#818181"
+                fontSize="16px"
+                marginText="16px auto 0px"
+              >
+                Construimos el futuro a través de modelos de negocio digitales
+                disruptivos.
+              </TitleComponet>
+            </ContentTitle>
+            <ContentFooterCard>
+              {showText && <p>Ver en linkedin</p>}
+            </ContentFooterCard>
+          </ContentCard>
+          <ContentCard>
+            <ContentTitle>
+              <IconBusiness />
+              <TitleComponet
+                variant="title"
+                color="#0063FB"
+                fontSize="12px"
+                marginText="25px auto 8px"
+              >
+                Consultoría
+              </TitleComponet>
+              <TitleComponet
+                variant="title"
+                color="#272727"
+                fontSize="30px"
+                marginText="4px auto 0px"
+              >
+                Negocios Digitales
+              </TitleComponet>
+              <TitleComponet
+                variant="subtitle"
+                color="#818181"
+                fontSize="16px"
+                marginText="16px auto 0px"
+              >
+                Construimos el futuro a través de modelos de negocio digitales
+                disruptivos.
+              </TitleComponet>
+            </ContentTitle>
+            <ContentFooterCard>
+              {showText && <p>Ver en linkedin</p>}
+            </ContentFooterCard>
+          </ContentCard>
+        </Carousel>
       </ContentCarrusel>
-      <ContentArrows>
-        {slider && (
-          <>
-            <ContentArrowSecundary currentSlide={currentSlide}>
-              <ArrowLeft
-                onClick={(e) => e.stopPropagation() || slider.prev()}
-                disabled={currentSlide === 0}
-              />
-            </ContentArrowSecundary>
-
-            <ContentArrowSecundary>
-              <ArrowRight
-                onClick={(e) => e.stopPropagation() || slider.next()}
-                disabled={currentSlide === slider.details().size - 1}
-              />
-            </ContentArrowSecundary>
-          </>
-        )}
-      </ContentArrows>
     </>
   );
 };
@@ -100,7 +243,7 @@ function ArrowLeft(props) {
     // >
     //   <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
     // </svg>
-    <svg width="14" height="24" viewBox="0 0 14 24">
+    <svg width="14" height="24" viewBox="0 0 14 24" onClick={props.onClick}>
       <defs>
         <path
           id="a"
@@ -134,7 +277,7 @@ function ArrowRight(props) {
     // >
     //   <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
     // </svg>
-    <svg width="14" height="24" viewBox="0 0 14 24">
+    <svg width="14" height="24" viewBox="0 0 14 24" onClick={props.onClick}>
       <defs>
         <path
           id="a"
