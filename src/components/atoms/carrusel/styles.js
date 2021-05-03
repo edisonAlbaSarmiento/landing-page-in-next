@@ -6,10 +6,12 @@ export const ContentCarrusel = styled.div`
   display: flex;
   justify-content: space-around;
   background-color: red;
+  margin-bottom: 14%;
 `;
 
 export const ContentCard = styled.div`
-  width: 16%;
+  width: 65%;
+  height: 380px;
   background-color: white;
   border-radius: 3%;
   display: flex;
@@ -18,16 +20,20 @@ export const ContentCard = styled.div`
 `;
 
 export const ContentArrows = styled.div`
-  background-color: green;
   display: flex;
-  margin: 8px 0px 0px 2%;
+  margin: 24% 0px 0px 2%;
   width: 10%;
   justify-content: space-around;
+  position: absolute;
+  /* position: absolute; */
+  @media (max-width: 768px) {
+    display: none;
+    bottom: 20%;
+  }
 `;
 
 export const ContentArrowSecundary = styled.div`
-  background-color: ${(props) =>
-    props.currentSlide === 0 ? '#BDBEC0' : 'white'};
+  background-color: ${(props) => (props.currentSlide ? '#BDBEC0' : 'white')};
   width: 54px;
   height: 54px;
   border-radius: 10px;
@@ -40,6 +46,9 @@ export const ContentTitle = styled.div`
   width: 92%;
   /* background-color: ${(props) => props.theme.color.blueBackground}; */
   padding: 8.3% 0 0 4.3%;
+  @media (max-width: 768px) {
+    padding: 4.3% 0 0 4.3%;
+  }
 `;
 
 export const ContentFooterCard = styled.div`
