@@ -3,11 +3,15 @@ import { ContentMake } from '../../molecules';
 import PropTypes from 'prop-types';
 
 function Make(props) {
-  const { textTitle, subTitle } = props;
+  const { textTitle, subTitle, dataCarrusel } = props;
 
   return (
     <ContentOrganism>
-      <ContentMake textTitle={textTitle} subTitle={subTitle} />
+      <ContentMake
+        textTitle={textTitle}
+        subTitle={subTitle}
+        dataCarrusel={dataCarrusel}
+      />
     </ContentOrganism>
   );
 }
@@ -15,6 +19,7 @@ function Make(props) {
 Make.propTypes = {
   textTitle: PropTypes.string.isRequired,
   subTitle: PropTypes.string.isRequired,
+  dataCarrusel: PropTypes.array.isRequired,
 };
 
 export default Make;

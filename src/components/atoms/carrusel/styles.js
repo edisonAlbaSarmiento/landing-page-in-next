@@ -2,15 +2,13 @@ import styled from 'styled-components';
 
 export const ContentCarrusel = styled.div`
   width: 100%;
-  height: 360px;
+  height: 100%;
   display: flex;
   justify-content: space-around;
-  background-color: red;
-  margin-bottom: 14%;
 `;
 
 export const ContentCard = styled.div`
-  width: 65%;
+  width: 66%;
   height: 380px;
   background-color: white;
   border-radius: 3%;
@@ -21,11 +19,10 @@ export const ContentCard = styled.div`
 
 export const ContentArrows = styled.div`
   display: flex;
-  margin: 24% 0px 0px 2%;
+  margin: 24% 0px 0px 3%;
   width: 10%;
   justify-content: space-around;
   position: absolute;
-  /* position: absolute; */
   @media (max-width: 768px) {
     display: none;
     bottom: 20%;
@@ -63,4 +60,8 @@ export const ContentFooterCard = styled.div`
   border-bottom-left-radius: 10px;
 `;
 
-export const ContainerIcon = styled.div``;
+export const ContainerImage = styled.div``;
+
+export const ImageCard = styled.img`
+  width: 100%;
+`;

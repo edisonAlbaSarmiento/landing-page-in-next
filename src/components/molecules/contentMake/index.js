@@ -4,7 +4,7 @@ import Bounce from 'react-reveal/Bounce';
 import PropTypes from 'prop-types';
 
 function ContentMake(props) {
-  const { textTitle, subTitle } = props;
+  const { textTitle, subTitle, dataCarrusel } = props;
   return (
     <Content>
       <Bounce left>
@@ -21,14 +21,8 @@ function ContentMake(props) {
             {subTitle}
           </TitleComponet>
         </ContentTitle>
-        <Carrusel />
+        <Carrusel dataCarrusel={dataCarrusel} />
       </Bounce>
-
-      {/* <img
-        src="https://raw.githubusercontent.com/CristianPaez/ImageEmp/master/ImagesGenerals/Group9.jpeg"
-        alt="Background Imagen de Card informacion"
-        title="Background Imagen de Card informacion"
-      ></img> */}
     </Content>
   );
 }
@@ -36,11 +30,13 @@ function ContentMake(props) {
 ContentMake.defaultProps = {
   textTitle: '',
   subTitle: '',
+  dataCarrusel: [],
 };
 
 ContentMake.propTypes = {
   textTitle: PropTypes.string,
   subTitle: PropTypes.string,
+  dataCarrusel: PropTypes.array,
 };
 
 export default ContentMake;
