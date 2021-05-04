@@ -36,6 +36,22 @@ const HomeTemplate = (props) => {
       >
         {props.team}
       </Grid>
+      {/* <Grid
+        container
+        direction="column"
+        justify="flex-start"
+        alignItems="center"
+      >
+        {props.contact}
+      </Grid>
+      <Grid
+        container
+        direction="column"
+        justify="flex-start"
+        alignItems="center"
+      >
+        {props.footer}
+      </Grid> */}
     </>
   );
 };

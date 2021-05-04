@@ -18,3 +18,22 @@ a {
 .rec .rec-pagination{
   display: none;
 }
+
+.rec .rec-item-wrapper {
+  width: 350px !important;
+}
+
+
+.rec .rec-carousel{
+  position: relative;
+}
+@media screen  and (max-width: 768px) {
+  .rec .rec-carousel{
+    width: 400px;
+  }
+  .rec .rec-item-wrapper {
+    width: 380px !important;
+  }
+  
+  
+}
