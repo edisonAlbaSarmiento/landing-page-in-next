@@ -1,9 +1,9 @@
 import { Content, ContentTitle } from './styles';
-import { TitleComponet } from 'components/atoms';
+import { TitleComponet, Carrusel } from 'components/atoms';
 import PropTypes from 'prop-types';
 
 function ContentTeam(props) {
-  const { textTitle, subTitle } = props;
+  const { textTitle, subTitle, dataCarrusel } = props;
   return (
     <Content>
       <ContentTitle>
@@ -19,6 +19,12 @@ function ContentTeam(props) {
           {subTitle}
         </TitleComponet>
       </ContentTitle>
+      <Carrusel
+        dataCarrusel={dataCarrusel}
+        heightCard="480px"
+        fontSizeText="20px"
+        marginTopButtom
+      />
     </Content>
   );
 }
@@ -26,11 +32,13 @@ function ContentTeam(props) {
 ContentTeam.defaultProps = {
   textTitle: '',
   subTitle: '',
+  dataCarrusel: [],
 };
 
 ContentTeam.propTypes = {
   textTitle: PropTypes.string,
   subTitle: PropTypes.string,
+  dataCarrusel: PropTypes.array,
 };
 
 export default ContentTeam;

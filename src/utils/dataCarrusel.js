@@ -62,7 +62,7 @@ const dataCarrusel = [
           'Construimos el futuro a través de modelos de negocio digitales disruptivos.',
         showText: false,
         urlImage:
-          'https://www.imaginamos.com/wp-content/uploads/2021/04/Group-228.png',
+          'https://www.imaginamos.com/wp-content/uploads/2021/04/Group-215.png',
         urllinkedin: 'https://www.linkedin.com/in/mariajosesatizabal/',
       },
       {
@@ -72,7 +72,7 @@ const dataCarrusel = [
           'Construimos el futuro a través de modelos de negocio digitales disruptivos.',
         showText: true,
         urlImage:
-          'https://www.imaginamos.com/wp-content/uploads/2021/04/Group-228.png',
+          'https://www.imaginamos.com/wp-content/uploads/2021/04/Group-220.png',
         urllinkedin: 'https://www.linkedin.com/in/mariajosesatizabal/',
       },
       {
@@ -82,7 +82,7 @@ const dataCarrusel = [
           'Construimos el futuro a través de modelos de negocio digitales disruptivos.',
         showText: true,
         urlImage:
-          'https://www.imaginamos.com/wp-content/uploads/2021/04/Group-228.png',
+          'https://www.imaginamos.com/wp-content/uploads/2021/04/Group-226.png',
         urllinkedin: 'https://www.linkedin.com/in/mariajosesatizabal/',
       },
       {
@@ -92,7 +92,17 @@ const dataCarrusel = [
           'Construimos el futuro a través de modelos de negocio digitales disruptivos.',
         showText: true,
         urlImage:
-          'https://www.imaginamos.com/wp-content/uploads/2021/04/Group-228.png',
+          'https://www.imaginamos.com/wp-content/uploads/2021/04/Group-221.png',
+        urllinkedin: 'https://www.linkedin.com/in/mariajosesatizabal/',
+      },
+      {
+        title: 'Consultoría',
+        subTitle: 'Negocios Digitales',
+        description:
+          'Construimos el futuro a través de modelos de negocio digitales disruptivos.',
+        showText: true,
+        urlImage:
+          'https://www.imaginamos.com/wp-content/uploads/2021/04/Group-224.png',
         urllinkedin: 'https://www.linkedin.com/in/mariajosesatizabal/',
       },
     ],

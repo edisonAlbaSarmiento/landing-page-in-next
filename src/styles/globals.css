@@ -20,7 +20,7 @@ a {
 }
 
 .rec .rec-item-wrapper {
-  width: 340px !important;
+  width: 350px !important;
 }
 
 
@@ -31,5 +31,9 @@ a {
   .rec .rec-carousel{
     width: 400px;
   }
+  .rec .rec-item-wrapper {
+    width: 380px !important;
+  }
+  
   
 }

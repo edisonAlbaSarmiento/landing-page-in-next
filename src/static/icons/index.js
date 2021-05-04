@@ -14,7 +14,8 @@ import IconTouch from './icons-carrusel/icon-touch';
 import IconBusiness from './icons-carrusel/icon-business';
 import IconInnovation from './icons-carrusel/icon-innovation';
 import IconBlub from './icons-carrusel/icon-blub';
-
+import ArrowRight from './icons-carrusel/icon-arrwo-right';
+import ArrowLeft from './icons-carrusel/icon-arrow-left';
 export {
   IconRappi,
   IconImaginamos,
@@ -32,4 +33,6 @@ export {
   IconBusiness,
   IconInnovation,
   IconBlub,
+  ArrowRight,
+  ArrowLeft,
 };

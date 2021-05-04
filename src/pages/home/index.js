@@ -5,6 +5,7 @@ import {
   CasesSuccess,
   Make,
   Team,
+  Footer,
 } from 'components/organisms';
 import Head from 'next/head';
 import dataCarrusel from '../../utils/dataCarrusel';
@@ -45,8 +46,8 @@ function Home() {
           />
         }
         casesStudy={<AddEventBanner validate onSubmit={handleAddEvent} />}
-        contact={<AddEventBanner validate onSubmit={handleAddEvent} />}
-        footer={<AddEventBanner validate onSubmit={handleAddEvent} />}
+        contact={<Footer />}
+        footer={<Footer textTitle="¿Cómo lo hacemos?" />}
       />
     </>
   );
