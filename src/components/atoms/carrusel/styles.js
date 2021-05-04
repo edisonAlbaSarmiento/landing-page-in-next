@@ -2,14 +2,13 @@ import styled from 'styled-components';
 
 export const ContentCarrusel = styled.div`
   width: 100%;
-  height: 100%;
   display: flex;
   justify-content: space-around;
 `;
 
 export const ContentCard = styled.div`
   width: 66%;
-  height: 380px;
+  height: ${(props) => props.heightCard};
   background-color: white;
   border-radius: 3%;
   display: flex;
@@ -19,7 +18,7 @@ export const ContentCard = styled.div`
 
 export const ContentArrows = styled.div`
   display: flex;
-  margin: 24% 0px 0px 3%;
+  margin: ${(props) => `${props.marginTopButtom ? '30%' : '24%'} 0px 0px 3%`};
   width: 10%;
   justify-content: space-around;
   position: absolute;
@@ -59,8 +58,6 @@ export const ContentFooterCard = styled.div`
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 `;
-
-export const ContainerImage = styled.div``;
 
 export const ImageCard = styled.img`
   width: 100%;

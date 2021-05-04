@@ -10,10 +10,9 @@ import {
   ContentArrowSecundary,
   ContentTitle,
   ContentFooterCard,
-  ContainerImage,
   ImageCard,
 } from './styles';
-import { IconBusiness } from '../../../static/icons';
+import { ArrowLeft, ArrowRight } from '../../../static/icons';
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
@@ -23,8 +22,6 @@ const breakPoints = [
 ];
 
 const Arrows = ({ type, onClick, isEdge }) => {
-  console.info('isEdge', [type, isEdge, consts, onClick]);
-
   // const pointer = type === consts.PREV ? <ArrowLeft /> : <ArrowRight />;
   const changeStyle = type === consts.PREV ? true : false;
 
@@ -43,15 +40,37 @@ const Arrows = ({ type, onClick, isEdge }) => {
   );
 };
 
+const ArrowsFooter = ({ type, onClick, isEdge }) => {
+  // const pointer = type === consts.PREV ? <ArrowLeft /> : <ArrowRight />;
+  const changeStyle = type === consts.PREV ? true : false;
+  const marginTopButtom = true;
+  return (
+    <ContentArrows marginTopButtom>
+      <>
+        <ContentArrowSecundary onClick={onClick} currentSlide={changeStyle}>
+          <ArrowLeft />
+        </ContentArrowSecundary>
+
+        <ContentArrowSecundary onClick={onClick} currentSlide={isEdge}>
+          <ArrowRight />
+        </ContentArrowSecundary>
+      </>
+    </ContentArrows>
+  );
+};
+
 const Carrusel = (props) => {
-  const { dataCarrusel } = props;
-  console.log('dataCarrusel', dataCarrusel);
+  const { dataCarrusel, heightCard, fontSizeText, marginTopButtom } = props;
+  console.log('marginTopButtom', marginTopButtom);
   return (
     <>
       <ContentCarrusel>
-        <Carousel breakPoints={breakPoints} renderArrow={Arrows}>
+        <Carousel
+          breakPoints={breakPoints}
+          renderArrow={marginTopButtom ? ArrowsFooter : Arrows}
+        >
           {dataCarrusel.map((itemCard, index) => (
-            <ContentCard key={index}>
+            <ContentCard key={index} heightCard={heightCard}>
               <ContentTitle>
                 {itemCard.urlImage ? (
                   <ImageCard src={`${itemCard.urlImage}`} />
@@ -69,7 +88,7 @@ const Carrusel = (props) => {
                 <TitleComponet
                   variant="title"
                   color="#272727"
-                  fontSize="30px"
+                  fontSize={`${fontSizeText}`}
                   marginText="4px auto 0px"
                 >
                   {itemCard.subTitle}
@@ -98,60 +117,13 @@ const Carrusel = (props) => {
   );
 };
 
-function ArrowLeft(props) {
-  return (
-    <svg width="14" height="24" viewBox="0 0 14 24" onClick={props.onClick}>
-      <defs>
-        <path
-          id="a"
-          d="M9.625 11.687l-9.12 8.837a1.633 1.633 0 000 2.36 1.762 1.762 0 002.436 0L13.28 12.869a1.633 1.633 0 000-2.362L2.94.49a1.762 1.762 0 00-2.436 0 1.633 1.633 0 000 2.361l9.12 8.837z"
-        ></path>
-      </defs>
-      <g fill="none" stroke="none">
-        <g transform="translate(-100 -2319)">
-          <g transform="translate(80 2304)">
-            <g transform="matrix(-1 0 0 1 34 15)">
-              <mask fill="#fff">
-                <use href="#a"></use>
-              </mask>
-              <use fill="#000" href="#a"></use>
-            </g>
-          </g>
-        </g>
-      </g>
-    </svg>
-  );
-}
-
-function ArrowRight(props) {
-  return (
-    <svg width="14" height="24" viewBox="0 0 14 24" onClick={props.onClick}>
-      <defs>
-        <path
-          id="a"
-          d="M9.625 11.687l-9.12 8.837a1.633 1.633 0 000 2.36 1.762 1.762 0 002.436 0L13.28 12.869a1.633 1.633 0 000-2.362L2.94.49a1.762 1.762 0 00-2.436 0 1.633 1.633 0 000 2.361l9.12 8.837z"
-        ></path>
-      </defs>
-      <g fill="none" stroke="none">
-        <g transform="translate(-164 -2320)">
-          <g transform="translate(80 2304)">
-            <g transform="translate(84 16)">
-              <mask fill="#fff">
-                <use href="#a"></use>
-              </mask>
-              <use fill="#000" href="#a"></use>
-            </g>
-          </g>
-        </g>
-      </g>
-    </svg>
-  );
-}
-
 Carrusel.defaultProps = {
   color: '#7bf5b1',
   marginText: '0px',
   dataCarrusel: [],
+  heightCard: '380px',
+  fontSizeText: '30px',
+  marginTopButtom: false,
 };
 
 Carrusel.propTypes = {
@@ -160,6 +132,9 @@ Carrusel.propTypes = {
   fontSize: PropTypes.string,
   marginText: PropTypes.string,
   dataCarrusel: PropTypes.array,
+  heightCard: PropTypes.string,
+  fontSizeText: PropTypes.string,
+  marginTopButtom: PropTypes.bool,
 };
 
 export default Carrusel;
