@@ -56,7 +56,7 @@ const dataCarrusel = [
         urllinkedin: 'https://www.linkedin.com/in/mariajosesatizabal/',
       },
       {
-        title: 'Consultoría',
+        title: 'Michael Duarte',
         subTitle: 'Negocios Digitales',
         description:
           'Construimos el futuro a través de modelos de negocio digitales disruptivos.',
