@@ -57,9 +57,9 @@ const dataCarrusel = [
       },
       {
         title: 'Michael Duarte',
-        subTitle: 'Negocios Digitales',
+        subTitle: 'Chief Technology Officer',
         description:
-          'Construimos el futuro a través de modelos de negocio digitales disruptivos.',
+          'Hace uso eficaz de la tecnología para problemáticas de negocio.',
         showText: false,
         urlImage:
           'https://www.imaginamos.com/wp-content/uploads/2021/04/Group-215.png',
@@ -76,30 +76,30 @@ const dataCarrusel = [
         urllinkedin: 'https://www.linkedin.com/in/mariajosesatizabal/',
       },
       {
-        title: 'Consultoría',
-        subTitle: 'Negocios Digitales',
+        title: 'Daian Quintero',
+        subTitle: 'Chief Customer Experience Officer',
         description:
-          'Construimos el futuro a través de modelos de negocio digitales disruptivos.',
+          'Si hay algo en lo que es experta, es en construir las mejores relaciones.',
         showText: true,
         urlImage:
           'https://www.imaginamos.com/wp-content/uploads/2021/04/Group-226.png',
         urllinkedin: 'https://www.linkedin.com/in/mariajosesatizabal/',
       },
       {
-        title: 'Consultoría',
-        subTitle: 'Negocios Digitales',
+        title: 'Ángela María Bedoya',
+        subTitle: 'Chief Legal Officer',
         description:
-          'Construimos el futuro a través de modelos de negocio digitales disruptivos.',
+          'Acuerdo en mano, polo a tierra. Experta en legalizar relaciones y alianzas.',
         showText: true,
         urlImage:
           'https://www.imaginamos.com/wp-content/uploads/2021/04/Group-221.png',
         urllinkedin: 'https://www.linkedin.com/in/mariajosesatizabal/',
       },
       {
-        title: 'Consultoría',
-        subTitle: 'Negocios Digitales',
+        title: 'Javier Gallego',
+        subTitle: 'Chief Operations Officer',
         description:
-          'Construimos el futuro a través de modelos de negocio digitales disruptivos.',
+          'El orden, la automatización y los procesos son su nutrición diaria.',
         showText: true,
         urlImage:
           'https://www.imaginamos.com/wp-content/uploads/2021/04/Group-224.png',
