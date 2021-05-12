@@ -18,7 +18,8 @@ export const ContentCard = styled.div`
 
 export const ContentArrows = styled.div`
   display: flex;
-  margin: ${(props) => `${props.marginTopButtom ? '30%' : '24%'} 0px 0px 3%`};
+  margin: ${(props) =>
+    `${props.marginTopButtom ? '30% 0px 0px 3%' : '24%  0px 0px 3%'}`};
   width: 10%;
   justify-content: space-around;
   position: absolute;
@@ -61,4 +62,8 @@ export const ContentFooterCard = styled.div`
 
 export const ImageCard = styled.img`
   width: 100%;
+`;
+
+export const LinkProfile = styled.p`
+  color: ${(props) => props.theme.color.titleBlue};
 `;

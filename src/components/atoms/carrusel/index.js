@@ -11,6 +11,7 @@ import {
   ContentTitle,
   ContentFooterCard,
   ImageCard,
+  LinkProfile,
 } from './styles';
 import { ArrowLeft, ArrowRight } from '../../../static/icons';
 
@@ -105,7 +106,7 @@ const Carrusel = (props) => {
               <ContentFooterCard>
                 {itemCard.showText && (
                   <a href={`${itemCard.urllinkedin}`} target="_blank">
-                    <p>Ver en Linkedin</p>
+                    <LinkProfile>Ver en Linkedin</LinkProfile>
                   </a>
                 )}
               </ContentFooterCard>

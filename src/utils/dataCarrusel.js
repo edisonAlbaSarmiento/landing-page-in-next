@@ -56,24 +56,24 @@ const dataCarrusel = [
         urllinkedin: 'https://www.linkedin.com/in/mariajosesatizabal/',
       },
       {
+        title: 'Juan Ignacio Vélez Ucrós',
+        subTitle: 'Chief Technology Officer',
+        description:
+          'Experimentando siempre para evolucionar negocios con datos.',
+        showText: true,
+        urlImage:
+          'https://www.imaginamos.com/wp-content/uploads/2021/04/Group-215.png',
+        urllinkedin: 'https://www.linkedin.com/in/juan-velez-ucros/',
+      },
+      {
         title: 'Michael Duarte',
         subTitle: 'Chief Technology Officer',
         description:
           'Hace uso eficaz de la tecnología para problemáticas de negocio.',
-        showText: false,
-        urlImage:
-          'https://www.imaginamos.com/wp-content/uploads/2021/04/Group-215.png',
-        urllinkedin: 'https://www.linkedin.com/in/mariajosesatizabal/',
-      },
-      {
-        title: 'Consultoría',
-        subTitle: 'Negocios Digitales',
-        description:
-          'Construimos el futuro a través de modelos de negocio digitales disruptivos.',
         showText: true,
         urlImage:
           'https://www.imaginamos.com/wp-content/uploads/2021/04/Group-220.png',
-        urllinkedin: 'https://www.linkedin.com/in/mariajosesatizabal/',
+        urllinkedin: 'https://www.linkedin.com/in/michael-ampudia-duarte/',
       },
       {
         title: 'Daian Quintero',
@@ -83,7 +83,7 @@ const dataCarrusel = [
         showText: true,
         urlImage:
           'https://www.imaginamos.com/wp-content/uploads/2021/04/Group-226.png',
-        urllinkedin: 'https://www.linkedin.com/in/mariajosesatizabal/',
+        urllinkedin: 'https://www.linkedin.com/in/daian-quintero-56088931/',
       },
       {
         title: 'Ángela María Bedoya',
@@ -93,7 +93,7 @@ const dataCarrusel = [
         showText: true,
         urlImage:
           'https://www.imaginamos.com/wp-content/uploads/2021/04/Group-221.png',
-        urllinkedin: 'https://www.linkedin.com/in/mariajosesatizabal/',
+        urllinkedin: 'https://www.linkedin.com/in/angela-leagal-tech-expert/',
       },
       {
         title: 'Javier Gallego',
@@ -103,7 +103,7 @@ const dataCarrusel = [
         showText: true,
         urlImage:
           'https://www.imaginamos.com/wp-content/uploads/2021/04/Group-224.png',
-        urllinkedin: 'https://www.linkedin.com/in/mariajosesatizabal/',
+        urllinkedin: 'https://www.linkedin.com/in/javier-gallego-anaya/',
       },
     ],
   },
