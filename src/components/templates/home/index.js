@@ -36,7 +36,7 @@ const HomeTemplate = (props) => {
       >
         {props.team}
       </Grid>
-      {/* <Grid
+      <Grid
         container
         direction="column"
         justify="flex-start"
@@ -51,7 +51,7 @@ const HomeTemplate = (props) => {
         alignItems="center"
       >
         {props.footer}
-      </Grid> */}
+      </Grid>
     </>
   );
 };

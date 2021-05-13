@@ -23,7 +23,6 @@ const breakPoints = [
 ];
 
 const Arrows = ({ type, onClick, isEdge }) => {
-  // const pointer = type === consts.PREV ? <ArrowLeft /> : <ArrowRight />;
   const changeStyle = type === consts.PREV ? true : false;
 
   return (
@@ -42,9 +41,7 @@ const Arrows = ({ type, onClick, isEdge }) => {
 };
 
 const ArrowsFooter = ({ type, onClick, isEdge }) => {
-  // const pointer = type === consts.PREV ? <ArrowLeft /> : <ArrowRight />;
   const changeStyle = type === consts.PREV ? true : false;
-  const marginTopButtom = true;
   return (
     <ContentArrows marginTopButtom>
       <>
@@ -62,7 +59,6 @@ const ArrowsFooter = ({ type, onClick, isEdge }) => {
 
 const Carrusel = (props) => {
   const { dataCarrusel, heightCard, fontSizeText, marginTopButtom } = props;
-  console.log('marginTopButtom', marginTopButtom);
   return (
     <>
       <ContentCarrusel>
