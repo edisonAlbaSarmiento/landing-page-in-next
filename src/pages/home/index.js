@@ -6,6 +6,7 @@ import {
   Make,
   Team,
   Footer,
+  About,
 } from 'components/organisms';
 import Head from 'next/head';
 import dataCarrusel from '../../utils/dataCarrusel';
@@ -46,7 +47,12 @@ function Home() {
           />
         }
         casesStudy={<AddEventBanner validate onSubmit={handleAddEvent} />}
-        contact={<Footer />}
+        contact={
+          <About
+            textTitle="Nuestro equipo de emprendedores"
+            subTitle="El 60% del éxito para cualquier negocio o proyecto es el equipo. Por esto, nos rodeamos de grandes emprendedores que nos ayudan hacer posible nuestra visión."
+          />
+        }
         footer={<Footer textTitle="¿Cómo lo hacemos?" />}
       />
     </>

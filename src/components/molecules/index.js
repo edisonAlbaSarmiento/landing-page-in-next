@@ -4,6 +4,7 @@ import ContentCases from './contentCases';
 import ContentMake from './contentMake';
 import ContentTeam from './contentTeam';
 import ContentFooter from './contentFooter';
+import ContentContact from './contentContact';
 
 export {
   FormItem,
@@ -11,5 +12,6 @@ export {
   ContentCases,
   ContentMake,
   ContentTeam,
+  ContentContact,
   ContentFooter,
 };
