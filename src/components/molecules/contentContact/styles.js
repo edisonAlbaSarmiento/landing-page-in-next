@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Content = styled.div`
   width: 100%;
-  background-image: url('https://raw.githubusercontent.com/CristianPaez/ImageEmp/master/ImagesGenerals/Group10.jpeg');
+  background-image: url('https://raw.githubusercontent.com/CristianPaez/ImageEmp/master/ImagesGenerals/Group11.jpeg');
   background-position: right;
   background-repeat: no-repeat;
   background-size: 70%;

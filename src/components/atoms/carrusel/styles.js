@@ -18,8 +18,13 @@ export const ContentCard = styled.div`
 
 export const ContentArrows = styled.div`
   display: flex;
-  margin: ${(props) =>
-    `${props.marginTopButtom ? '30% 0px 0px 3%' : '24%  0px 0px 3%'}`};
+  margin: ${(props) => {
+    if (props.marginTopButtom) {
+      `30% 0px 0px 4%`;
+    } else {
+      `24% 0px 0px 4%`;
+    }
+  }};
   width: 10%;
   justify-content: space-around;
   position: absolute;
