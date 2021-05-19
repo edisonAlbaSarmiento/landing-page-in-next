@@ -16,6 +16,10 @@ function Home() {
   const handleAddEvent = () => {
     console.log('New Event Added');
   };
+
+  const handleSubmitdata = (values) => {
+    console.lo('VALUES ', values);
+  };
   return (
     <>
       <Head>
@@ -48,7 +52,11 @@ function Home() {
         }
         casesStudy={<AddEventBanner validate onSubmit={handleAddEvent} />}
         contact={
-          <About textTitle="Hola." subTitle="Estamos acá para ayudarte." />
+          <About
+            textTitle="Hola."
+            subTitle="Estamos acá para ayudarte."
+            handleSubmit={handleSubmitdata}
+          />
         }
         footer={<Footer textTitle="¿Cómo lo hacemos?" />}
       />
