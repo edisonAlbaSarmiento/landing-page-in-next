@@ -16,6 +16,7 @@ import IconInnovation from './icons-carrusel/icon-innovation';
 import IconBlub from './icons-carrusel/icon-blub';
 import ArrowRight from './icons-carrusel/icon-arrwo-right';
 import ArrowLeft from './icons-carrusel/icon-arrow-left';
+import IconRow from './arrow-right';
 export {
   IconRappi,
   IconImaginamos,
@@ -35,4 +36,5 @@ export {
   IconBlub,
   ArrowRight,
   ArrowLeft,
+  IconRow,
 };

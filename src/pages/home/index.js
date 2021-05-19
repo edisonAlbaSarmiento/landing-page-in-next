@@ -48,10 +48,7 @@ function Home() {
         }
         casesStudy={<AddEventBanner validate onSubmit={handleAddEvent} />}
         contact={
-          <About
-            textTitle="Nuestro equipo de emprendedores"
-            subTitle="El 60% del éxito para cualquier negocio o proyecto es el equipo. Por esto, nos rodeamos de grandes emprendedores que nos ayudan hacer posible nuestra visión."
-          />
+          <About textTitle="Hola." subTitle="Estamos acá para ayudarte." />
         }
         footer={<Footer textTitle="¿Cómo lo hacemos?" />}
       />
