@@ -18,3 +18,17 @@ export const ContentTitle = styled.div`
   background-color: ${(props) => props.theme.color.trasnparentBackground};
   padding: ${(props) => props.theme.padding.paddingSmall};
 `;
+
+export const ContentForm = styled.div`
+  width: 36%;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  float: right;
+  padding: ${(props) => props.theme.padding.paddingSmall};
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+export const FormStyle = styled.form``;

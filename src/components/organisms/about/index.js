@@ -3,11 +3,15 @@ import { ContentContact } from '../../molecules';
 import PropTypes from 'prop-types';
 
 function About(props) {
-  const { textTitle, subTitle } = props;
+  const { textTitle, subTitle, handleSubmit } = props;
 
   return (
     <ContentOrganism>
-      <ContentContact textTitle={textTitle} subTitle={subTitle} />
+      <ContentContact
+        textTitle={textTitle}
+        subTitle={subTitle}
+        handleSubmit={handleSubmit}
+      />
     </ContentOrganism>
   );
 }
@@ -15,6 +19,7 @@ function About(props) {
 About.propTypes = {
   textTitle: PropTypes.string.isRequired,
   subTitle: PropTypes.string.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
 };
 
 export default About;

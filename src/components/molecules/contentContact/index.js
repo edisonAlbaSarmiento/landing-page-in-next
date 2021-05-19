@@ -1,9 +1,13 @@
-import { Content, ContentTitle } from './styles';
-import { TitleComponet } from 'components/atoms';
+import {
+  TitleComponet,
+  TextFieldComponent,
+  ButtonComponent,
+} from 'components/atoms';
+import { Content, ContentTitle, ContentForm, FormStyle } from './styles';
 import PropTypes from 'prop-types';
-
 function ContentContact(props) {
-  const { textTitle, subTitle } = props;
+  const { textTitle, subTitle, handleSubmit } = props;
+
   return (
     <Content>
       <ContentTitle>
@@ -19,6 +23,18 @@ function ContentContact(props) {
           {subTitle}
         </TitleComponet>
       </ContentTitle>
+      <ContentForm onSubmit={handleSubmit}>
+        <FormStyle>
+          <TextFieldComponent label="Test" value="hola" required />
+
+          <TextFieldComponent label="Test" value="hola" required />
+
+          <TextFieldComponent label="Test" value="hola" required />
+
+          <TextFieldComponent label="Test" value="hola" required />
+          <ButtonComponent title={textTitle} />
+        </FormStyle>
+      </ContentForm>
     </Content>
   );
 }
@@ -26,11 +42,13 @@ function ContentContact(props) {
 ContentContact.defaultProps = {
   textTitle: '',
   subTitle: '',
+  handleSubmit: () => {},
 };
 
 ContentContact.propTypes = {
   textTitle: PropTypes.string,
   subTitle: PropTypes.string,
+  handleSubmit: PropTypes.func,
 };
 
 export default ContentContact;
