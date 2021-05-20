@@ -5,6 +5,8 @@ import {
 } from 'components/atoms';
 import { Content, ContentTitle, ContentForm, FormStyle } from './styles';
 import PropTypes from 'prop-types';
+import { Formik } from 'formik';
+
 function ContentContact(props) {
   const { textTitle, subTitle, handleSubmit } = props;
 
@@ -23,8 +25,8 @@ function ContentContact(props) {
           {subTitle}
         </TitleComponet>
       </ContentTitle>
-      <ContentForm onSubmit={handleSubmit}>
-        <FormStyle>
+      <ContentForm>
+        <FormStyle onSubmit={formik.handleSubmit}>
           <TextFieldComponent label="Test" value="hola" required />
 
           <TextFieldComponent label="Test" value="hola" required />
