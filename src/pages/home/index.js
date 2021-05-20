@@ -10,6 +10,7 @@ import {
 } from 'components/organisms';
 import Head from 'next/head';
 import dataCarrusel from '../../utils/dataCarrusel';
+import { useFormik } from 'formik';
 
 function Home() {
   // const eventDataList = [];
@@ -18,8 +19,21 @@ function Home() {
   };
 
   const handleSubmitdata = (values) => {
-    console.lo('VALUES ', values);
+    // console.log('VALUES ', values);
+    // console.log('VALUES te', values.target.value);
+    // alert('An essay was submitted: ' + values.target.value);
+    const formik = useFormik({
+      initialValues: {
+        email: 'foobar@example.com',
+        password: 'foobar',
+      },
+      validationSchema: validationSchema,
+      onSubmit: (values) => {
+        alert(JSON.stringify(values, null, 2));
+      },
+    });
   };
+
   return (
     <>
       <Head>

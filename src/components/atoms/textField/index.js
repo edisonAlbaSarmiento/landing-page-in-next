@@ -5,6 +5,7 @@ import TextField from '@material-ui/core/TextField';
 const TextFieldComponent = (props) => (
   <TextField
     fullWidth
+    name={props.name}
     label={props.label}
     defaultValue={props.value}
     required={props.required}
@@ -27,6 +28,7 @@ TextFieldComponent.defaultProps = {
 
 TextFieldComponent.propTypes = {
   label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   value: PropTypes.string,
   required: PropTypes.bool,
   onChange: PropTypes.func,
