@@ -18,7 +18,9 @@ function Home() {
   };
 
   const handleSubmitdata = (values) => {
-    console.lo('VALUES ', values);
+    console.log('VALUES ', values);
+    console.log('VALUES te', values.target.value);
+    alert('An essay was submitted: ' + values.target.value);
   };
   return (
     <>

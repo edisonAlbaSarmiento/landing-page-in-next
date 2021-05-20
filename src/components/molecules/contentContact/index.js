@@ -1,7 +1,7 @@
 import {
   TitleComponet,
   TextFieldComponent,
-  ButtonComponent,
+  ButtonContact,
 } from 'components/atoms';
 import { Content, ContentTitle, ContentForm, FormStyle } from './styles';
 import PropTypes from 'prop-types';
@@ -32,7 +32,18 @@ function ContentContact(props) {
           <TextFieldComponent label="Test" value="hola" required />
 
           <TextFieldComponent label="Test" value="hola" required />
-          <ButtonComponent title={textTitle} />
+
+          <ButtonContact
+            widthButton="100%"
+            heightButtom="60px"
+            // onClick={onClick}
+            backgroundColorButton="transparent"
+            color="#FFFFFF"
+            borderColor="#7bf5b1"
+            title
+          >
+            Angendar una cita
+          </ButtonContact>
         </FormStyle>
       </ContentForm>
     </Content>

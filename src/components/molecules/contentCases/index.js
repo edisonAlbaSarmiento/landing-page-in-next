@@ -49,7 +49,7 @@ function ContentCases(params) {
                 heightButtom="80px"
                 backgroundColorButton="#FF2E4B"
                 borderColor="#FFFF"
-                isSelect={useItem === 0 && true}
+                isSelect={useItem === 0}
                 borderRadius="16px"
                 onClick={() => changeState(0, true)}
               >
