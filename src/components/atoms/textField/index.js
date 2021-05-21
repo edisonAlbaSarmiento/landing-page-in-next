@@ -50,6 +50,9 @@ const TextFieldComponent = (props) => (
       inputProps={{
         style: { color: 'white' },
       }}
+      type={props.type}
+      multiline={props.multiline}
+      placeholder={props.placeholder}
     />
   </ContentField>
 );
@@ -60,6 +63,9 @@ TextFieldComponent.defaultProps = {
   error: false,
   errorMessage: '',
   paddingField: '1%',
+  type: null,
+  multiline: false,
+  placeholder: '',
 };
 
 TextFieldComponent.propTypes = {
@@ -71,6 +77,9 @@ TextFieldComponent.propTypes = {
   error: PropTypes.bool,
   errorMessage: PropTypes.string,
   paddingField: PropTypes.string,
+  type: PropTypes.string,
+  multiline: PropTypes.bool,
+  placeholder: PropTypes.string,
 };
 
 export default TextFieldComponent;

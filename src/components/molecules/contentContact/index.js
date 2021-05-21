@@ -27,18 +27,62 @@ function ContentContact(props) {
       <ContentForm>
         <FormStyle onSubmit={formikForm.handleSubmit}>
           <TextFieldComponent
-            label="Email"
-            name="email"
-            value={formikForm.values.email}
+            label="Nombre Completo"
+            name="fullName"
+            placeholder={formikForm.values.fullName}
             onChange={formikForm.handleChange}
-            error={formikForm.touched.email && Boolean(formikForm.errors.email)}
-            errorMessage={formikForm.touched.email && formikForm.errors.email}
+            error={
+              formikForm.touched.fullName && Boolean(formikForm.errors.fullName)
+            }
+            errorMessage={
+              formikForm.touched.fullName && formikForm.errors.fullName
+            }
           />
 
           <TextFieldComponent
-            label="Password"
+            label="Email"
+            name="email"
+            placeholder={formikForm.values.email}
+            onChange={formikForm.handleChange}
+            error={formikForm.touched.email && Boolean(formikForm.errors.email)}
+            helperText={formikForm.touched.email && formikForm.errors.email}
+            errorMessage={formikForm.touched.email && formikForm.errors.email}
+          />
+          <TextFieldComponent
+            label="Telefono"
+            name="cellphone"
+            placeholder={formikForm.values.cellphone}
+            onChange={formikForm.handleChange}
+            error={
+              formikForm.touched.cellphone &&
+              Boolean(formikForm.errors.cellphone)
+            }
+            errorMessage={
+              formikForm.touched.cellphone && formikForm.errors.cellphone
+            }
+            type="number"
+          />
+
+          <TextFieldComponent
+            label="Nombre de la organizacion"
+            name="nameOrganize"
+            placeholder={formikForm.values.nameOrganize}
+            onChange={formikForm.handleChange}
+            error={
+              formikForm.touched.nameOrganize &&
+              Boolean(formikForm.errors.nameOrganize)
+            }
+            helperText={
+              formikForm.touched.nameOrganize && formikForm.errors.nameOrganize
+            }
+            errorMessage={
+              formikForm.touched.nameOrganize && formikForm.errors.nameOrganize
+            }
+          />
+          <TextFieldComponent
+            label="Select"
             name="password"
-            value={formikForm.values.password}
+            placeholder={formikForm.values.password}
             onChange={formikForm.handleChange}
             error={
               formikForm.touched.password && Boolean(formikForm.errors.password)
@@ -51,52 +95,17 @@ function ContentContact(props) {
             }
           />
           <TextFieldComponent
-            label="Email"
-            name="email"
-            value={formikForm.values.email}
-            onChange={formikForm.handleChange}
-            error={formikForm.touched.email && Boolean(formikForm.errors.email)}
-            errorMessage={formikForm.touched.email && formikForm.errors.email}
-          />
-
-          <TextFieldComponent
-            label="Password"
-            name="password"
-            value={formikForm.values.password}
+            label="Mensaje"
+            name="message"
+            placeholder={formikForm.values.message}
             onChange={formikForm.handleChange}
             error={
-              formikForm.touched.password && Boolean(formikForm.errors.password)
-            }
-            helperText={
-              formikForm.touched.password && formikForm.errors.password
+              formikForm.touched.message && Boolean(formikForm.errors.message)
             }
             errorMessage={
-              formikForm.touched.password && formikForm.errors.password
+              formikForm.touched.message && formikForm.errors.message
             }
-          />
-          <TextFieldComponent
-            label="Email"
-            name="email"
-            value={formikForm.values.email}
-            onChange={formikForm.handleChange}
-            error={formikForm.touched.email && Boolean(formikForm.errors.email)}
-            errorMessage={formikForm.touched.email && formikForm.errors.email}
-          />
-
-          <TextFieldComponent
-            label="Password"
-            name="password"
-            value={formikForm.values.password}
-            onChange={formikForm.handleChange}
-            error={
-              formikForm.touched.password && Boolean(formikForm.errors.password)
-            }
-            helperText={
-              formikForm.touched.password && formikForm.errors.password
-            }
-            errorMessage={
-              formikForm.touched.password && formikForm.errors.password
-            }
+            multiline
           />
 
           <ButtonContact

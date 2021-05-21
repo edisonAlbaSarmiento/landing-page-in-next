@@ -21,12 +21,12 @@ function Home() {
 
   const formik = useFormik({
     initialValues: {
-      fullName: 'foobar@example.com',
+      fullName: 'Edison alba',
       email: 'foobar@example.com',
-      cellphone: 'foobar',
-      nameOrganize: 'foobar@example.com',
+      cellphone: '3112323323',
+      nameOrganize: 'Imaginamos',
       selectInput: 'null',
-      message: 'foobar',
+      message: 'Creemos algo grandioso',
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
