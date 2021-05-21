@@ -11,6 +11,7 @@ import {
 import Head from 'next/head';
 import dataCarrusel from '../../utils/dataCarrusel';
 import { useFormik } from 'formik';
+import { validationSchema } from '../../utils';
 
 function Home() {
   // const eventDataList = [];
@@ -18,22 +19,20 @@ function Home() {
     console.log('New Event Added');
   };
 
-  const handleSubmitdata = (values) => {
-    // console.log('VALUES ', values);
-    // console.log('VALUES te', values.target.value);
-    // alert('An essay was submitted: ' + values.target.value);
-    const formik = useFormik({
-      initialValues: {
-        email: 'foobar@example.com',
-        password: 'foobar',
-      },
-      validationSchema: validationSchema,
-      onSubmit: (values) => {
-        alert(JSON.stringify(values, null, 2));
-      },
-    });
-  };
-
+  const formik = useFormik({
+    initialValues: {
+      fullName: 'Edison alba',
+      email: 'foobar@example.com',
+      cellphone: '3112323323',
+      nameOrganize: 'Imaginamos',
+      selectInput: 'null',
+      message: 'Creemos algo grandioso',
+    },
+    validationSchema: validationSchema,
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
   return (
     <>
       <Head>
@@ -69,7 +68,8 @@ function Home() {
           <About
             textTitle="Hola."
             subTitle="Estamos acá para ayudarte."
-            handleSubmit={handleSubmitdata}
+            handleSubmit={handleAddEvent}
+            formikForm={formik}
           />
         }
         footer={<Footer textTitle="¿Cómo lo hacemos?" />}
