@@ -5,10 +5,9 @@ import {
 } from 'components/atoms';
 import { Content, ContentTitle, ContentForm, FormStyle } from './styles';
 import PropTypes from 'prop-types';
-import { Formik } from 'formik';
 
 function ContentContact(props) {
-  const { textTitle, subTitle, handleSubmit } = props;
+  const { textTitle, subTitle, handleSubmit, formikForm } = props;
 
   return (
     <Content>
@@ -26,14 +25,79 @@ function ContentContact(props) {
         </TitleComponet>
       </ContentTitle>
       <ContentForm>
-        <FormStyle onSubmit={formik.handleSubmit}>
-          <TextFieldComponent label="Test" value="hola" required />
+        <FormStyle onSubmit={formikForm.handleSubmit}>
+          <TextFieldComponent
+            label="Email"
+            name="email"
+            value={formikForm.values.email}
+            onChange={formikForm.handleChange}
+            error={formikForm.touched.email && Boolean(formikForm.errors.email)}
+            errorMessage={formikForm.touched.email && formikForm.errors.email}
+          />
 
-          <TextFieldComponent label="Test" value="hola" required />
+          <TextFieldComponent
+            label="Password"
+            name="password"
+            value={formikForm.values.password}
+            onChange={formikForm.handleChange}
+            error={
+              formikForm.touched.password && Boolean(formikForm.errors.password)
+            }
+            helperText={
+              formikForm.touched.password && formikForm.errors.password
+            }
+            errorMessage={
+              formikForm.touched.password && formikForm.errors.password
+            }
+          />
+          <TextFieldComponent
+            label="Email"
+            name="email"
+            value={formikForm.values.email}
+            onChange={formikForm.handleChange}
+            error={formikForm.touched.email && Boolean(formikForm.errors.email)}
+            errorMessage={formikForm.touched.email && formikForm.errors.email}
+          />
 
-          <TextFieldComponent label="Test" value="hola" required />
+          <TextFieldComponent
+            label="Password"
+            name="password"
+            value={formikForm.values.password}
+            onChange={formikForm.handleChange}
+            error={
+              formikForm.touched.password && Boolean(formikForm.errors.password)
+            }
+            helperText={
+              formikForm.touched.password && formikForm.errors.password
+            }
+            errorMessage={
+              formikForm.touched.password && formikForm.errors.password
+            }
+          />
+          <TextFieldComponent
+            label="Email"
+            name="email"
+            value={formikForm.values.email}
+            onChange={formikForm.handleChange}
+            error={formikForm.touched.email && Boolean(formikForm.errors.email)}
+            errorMessage={formikForm.touched.email && formikForm.errors.email}
+          />
 
-          <TextFieldComponent label="Test" value="hola" required />
+          <TextFieldComponent
+            label="Password"
+            name="password"
+            value={formikForm.values.password}
+            onChange={formikForm.handleChange}
+            error={
+              formikForm.touched.password && Boolean(formikForm.errors.password)
+            }
+            helperText={
+              formikForm.touched.password && formikForm.errors.password
+            }
+            errorMessage={
+              formikForm.touched.password && formikForm.errors.password
+            }
+          />
 
           <ButtonContact
             widthButton="100%"
@@ -56,12 +120,14 @@ ContentContact.defaultProps = {
   textTitle: '',
   subTitle: '',
   handleSubmit: () => {},
+  formikForm: () => {},
 };
 
 ContentContact.propTypes = {
   textTitle: PropTypes.string,
   subTitle: PropTypes.string,
   handleSubmit: PropTypes.func,
+  formikForm: PropTypes.any,
 };
 
 export default ContentContact;

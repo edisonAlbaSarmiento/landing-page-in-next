@@ -21,7 +21,7 @@ export const ContentTitle = styled.div`
 
 export const ContentForm = styled.div`
   width: 36%;
-  background-color: red;
+  background-color: ${(props) => props.theme.color.blueBackground};
   display: flex;
   flex-direction: column;
   float: right;
