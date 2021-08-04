@@ -1,5 +1,5 @@
 import { ContactTemplate } from 'components/templates';
-import { ContenForm, AddEventBanner } from 'components/organisms';
+import { AddEventBanner } from 'components/organisms';
 
 // import { fetchEventData } from 'services/EventDataService';
 
@@ -56,9 +56,9 @@ const About = () => {
           onSubmit={handleAddEvent}
         />
       }
-      rightPanel={
-        <ContenForm title="Upcoming Event" eventDataList={eventDataList} />
-      }
+      // rightPanel={
+      //   <ContenForm title="Upcoming Event" eventDataList={eventDataList} />
+      // }
       content={<AddEventBanner validate onSubmit={handleAddEvent} />}
     />
   );

@@ -1,0 +1,1 @@
+{"ast":null,"code":"const theme = {\n  color: {\n    blueBackground: '#252a2e',\n    redtest: 'red',\n    trasnparentBackground: '#252b2e14',\n    titleBlue: '#0063FB'\n  },\n  padding: {\n    paddingSmall: '3.3%'\n  }\n};\nexport default theme;","map":null,"metadata":{},"sourceType":"module"}

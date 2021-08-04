@@ -1,0 +1,1 @@
+{"ast":null,"code":"import styled from 'styled-components';\nexport const ContentField = styled.div`\n  padding: ${props => props.paddingField};\n`;","map":null,"metadata":{},"sourceType":"module"}

@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { ContentFooter } from '../../molecules';\nimport { ContetFooter } from './styles';\n\nfunction Footer(params) {\n  return /*#__PURE__*/_jsx(ContetFooter, {\n    children: /*#__PURE__*/_jsx(ContentFooter, {})\n  });\n}\n\nexport default Footer;","map":null,"metadata":{},"sourceType":"module"}

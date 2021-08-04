@@ -1,0 +1,1 @@
+{"ast":null,"code":"import HomeTemplate from './home';\nimport ContactTemplate from './contact';\nexport { HomeTemplate, ContactTemplate };","map":null,"metadata":{},"sourceType":"module"}

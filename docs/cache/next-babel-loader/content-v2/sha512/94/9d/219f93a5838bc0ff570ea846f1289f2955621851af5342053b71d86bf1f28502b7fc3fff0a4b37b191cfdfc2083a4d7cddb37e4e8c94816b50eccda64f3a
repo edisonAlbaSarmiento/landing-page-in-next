@@ -1,0 +1,1 @@
+{"ast":null,"code":"import styled from 'styled-components';\nexport const ContentOrganism = styled.div`\n  width: 100%;\n  height: 715px;\n  background-color: ${props => props.theme.color.blueBackground};\n  @media (max-width: 768px) {\n    height: 100%;\n  }\n`;","map":null,"metadata":{},"sourceType":"module"}

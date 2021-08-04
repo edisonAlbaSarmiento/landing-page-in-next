@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Content } from './styles';\nimport { ContentCases } from '../../molecules';\n\nfunction CasesSuccess(params) {\n  return /*#__PURE__*/_jsx(Content, {\n    children: /*#__PURE__*/_jsx(ContentCases, {})\n  });\n}\n\nexport default CasesSuccess;","map":null,"metadata":{},"sourceType":"module"}
