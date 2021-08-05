@@ -3,6 +3,8 @@ function ContentFooter(params) {
     <>
       <div style={{ backgroundColor: 'yellow' }}>Edison footer </div>
       <div style={{ backgroundColor: 'yellow' }}>Edison footer </div>
+      <div style={{ backgroundColor: 'yellow' }}>Edison footer </div>
+
     </>
   );
 }
