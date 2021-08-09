@@ -14,6 +14,9 @@ export const ContentCard = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  @media (max-width: 768px) {
+    height: auto;
+  }
 `;
 
 export const ContentArrows = styled.div`
@@ -43,7 +46,7 @@ export const ContentTitle = styled.div`
   /* background-color: ${(props) => props.theme.color.blueBackground}; */
   padding: 8.3% 0 0 4.3%;
   @media (max-width: 768px) {
-    padding: 4.3% 0 0 4.3%;
+    padding: 4.3% 0 24px 4.3%;
   }
 `;
 
@@ -57,6 +60,9 @@ export const ContentFooterCard = styled.div`
   align-items: center;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
+  @media (max-width: 768px) {
+    height: 70px;
+  }
 `;
 
 export const ImageCard = styled.img`
@@ -65,4 +71,7 @@ export const ImageCard = styled.img`
 
 export const LinkProfile = styled.p`
   color: ${(props) => props.theme.color.titleBlue};
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `;

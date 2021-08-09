@@ -9,22 +9,22 @@ function ContentTeam(props) {
     <Bounce left>
       <Content>
         <ContentTitle>
-          <TitleComponet variant="title" marginText="inherit" color="#ffff">
+          <TitleComponet variant='title' marginText='inherit' color='#ffff'>
             {textTitle}
           </TitleComponet>
           <TitleComponet
-            variant="subtitle"
-            color="#ffff"
-            fontSize="25px"
-            marginText="20px 0px 40.5px"
+            variant='subtitle'
+            color='#ffff'
+            fontSize='25px'
+            marginText='20px 0px 40.5px'
           >
             {subTitle}
           </TitleComponet>
         </ContentTitle>
         <Carrusel
           dataCarrusel={dataCarrusel}
-          heightCard="480px"
-          fontSizeText="20px"
+          heightCard='480px'
+          fontSizeText='20px'
           marginTopButtom
         />
       </Content>

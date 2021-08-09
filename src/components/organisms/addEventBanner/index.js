@@ -116,14 +116,14 @@ const AddEventBanner = (props) => {
             onBlur={() => validate && validateField('type')}
           />
         </Grid>
-        <Grid item container xs={12} justify="center">
+        <Grid item container xs={12} justifyContent="center">
           <ButtonComponent title="Add Event" onClick={handleSubmit} />
         </Grid>
       </Grid>
     </Box>
   );
 };
-
+ 
 AddEventBanner.propTypes = {
   validate: PropTypes.bool,
   onSubmit: PropTypes.func,

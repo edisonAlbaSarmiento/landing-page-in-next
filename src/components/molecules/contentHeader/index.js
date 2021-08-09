@@ -28,14 +28,14 @@ function ContentHeader(props) {
           <IconImaginamos />
         </ContainerIcon>
         <Bounce left>
-          <TitleComponet variant="title" marginText="revert" color="#7bf5b1">
+          <TitleComponet variant='title' marginText='revert' color='#7bf5b1'>
             {textTitle}
           </TitleComponet>
           <TitleComponet
-            variant="subtitle"
-            fontSize="25px"
-            marginText="20px 0px 40.5px"
-            color="#FFFFFF"
+            variant='subtitle'
+            fontSize='25px'
+            marginText='20px 0px 40.5px'
+            color='#FFFFFF'
           >
             {subTitle}
           </TitleComponet>
@@ -47,12 +47,13 @@ function ContentHeader(props) {
           </ContentButton>
         </Bounce>
         <ButtonContact
-          widthButton="30%"
-          heightButtom="10%"
+          widthMedia='100%'
+          widthButton='30%'
+          heightButtom='10%'
           onClick={onClick}
-          backgroundColorButton="transparent"
-          color="#FFFFFF"
-          borderColor="#7bf5b1"
+          backgroundColorButton='transparent'
+          color='#FFFFFF'
+          borderColor='#7bf5b1'
           title
         >
           {textButtom}
@@ -62,8 +63,8 @@ function ContentHeader(props) {
         <ContentImage>
           <Fade top>
             <Image
-              src="https://raw.githubusercontent.com/edisonAlbaSarmiento/landing-page-in-next/main/src/static/images/BackgroundBack.png"
-              alt="back image header"
+              src='https://raw.githubusercontent.com/edisonAlbaSarmiento/landing-page-in-next/main/src/static/images/BackgroundBack.png'
+              alt='back image header'
               width={380}
               height={706}
             />
@@ -72,8 +73,8 @@ function ContentHeader(props) {
         <ContentImageBackground>
           <Fade right>
             <Image
-              src="https://raw.githubusercontent.com/edisonAlbaSarmiento/landing-page-in-next/main/src/static/images/BackgroundHeader.png"
-              alt="cellphone"
+              src='https://raw.githubusercontent.com/edisonAlbaSarmiento/landing-page-in-next/main/src/static/images/BackgroundHeader.png'
+              alt='cellphone'
               width={550}
               height={620}
             />

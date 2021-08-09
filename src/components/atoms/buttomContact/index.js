@@ -4,6 +4,7 @@ import { Button } from './styles';
 const ButtonContact = (props) => {
   const {
     widthButton,
+    widthMedia,
     heightButtom,
     disabled,
     onClick,
@@ -20,6 +21,7 @@ const ButtonContact = (props) => {
       disabled={disabled}
       onClick={onClick}
       widthButton={widthButton}
+      widthMedia={widthMedia}
       heightButtom={heightButtom}
       fontSize={fontSize}
       backgroundColorButton={backgroundColorButton}
@@ -44,6 +46,7 @@ ButtonContact.defaultProps = {
   isSelect: false,
   borderRadius: '5px',
   title: false,
+  widthMedia: '80px',
 };
 
 ButtonContact.propTypes = {
@@ -51,6 +54,7 @@ ButtonContact.propTypes = {
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
   widthButton: PropTypes.string,
+  widthMedia: PropTypes.string,
   heightButtom: PropTypes.string,
   color: PropTypes.string,
   fontSize: PropTypes.string,

@@ -22,7 +22,7 @@ TitleComponet.defaultProps = {
 
 TitleComponet.propTypes = {
   color: PropTypes.string,
-  variant: PropTypes.oneOf(['title', 'subtitle']),
+  variant: PropTypes.oneOf(['title', 'subtitle', 'textCards']),
   fontSize: PropTypes.string,
   marginText: PropTypes.string,
 };

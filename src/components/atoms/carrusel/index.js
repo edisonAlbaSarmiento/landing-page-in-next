@@ -75,33 +75,33 @@ const Carrusel = (props) => {
                   itemCard.icon
                 )}
                 <TitleComponet
-                  variant="title"
-                  color="#0063FB"
-                  fontSize="12px"
-                  marginText="25px auto 8px"
+                  variant='textCards'
+                  color='#0063FB'
+                  fontSize='12px'
+                  marginText='25px auto 8px'
                 >
                   {itemCard.title}
                 </TitleComponet>
                 <TitleComponet
-                  variant="title"
-                  color="#272727"
+                  variant='textCards'
+                  color='#272727'
                   fontSize={`${fontSizeText}`}
-                  marginText="4px auto 0px"
+                  marginText='4px auto 0px'
                 >
                   {itemCard.subTitle}
                 </TitleComponet>
                 <TitleComponet
-                  variant="subtitle"
-                  color="#818181"
-                  fontSize="16px"
-                  marginText="16px auto 0px"
+                  variant='textCards'
+                  color='#818181'
+                  fontSize='16px'
+                  marginText='16px auto 0px'
                 >
                   {itemCard.description}
                 </TitleComponet>
               </ContentTitle>
               <ContentFooterCard>
                 {itemCard.showText && (
-                  <a href={`${itemCard.urllinkedin}`} target="_blank">
+                  <a href={`${itemCard.urllinkedin}`} target='_blank'>
                     <LinkProfile>Ver en Linkedin</LinkProfile>
                   </a>
                 )}

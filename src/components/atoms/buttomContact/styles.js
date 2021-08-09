@@ -21,4 +21,7 @@ export const Button = styled.button`
       props.title === 0 ? '#7bf5b1' : props.backgroundColorButton};
     color: ${(props) => props.isSelect && props.theme.color.blueBackground};
   }
+  @media (max-width: 768px) {
+    width: ${(props) => props.widthMedia};
+  }
 `;
