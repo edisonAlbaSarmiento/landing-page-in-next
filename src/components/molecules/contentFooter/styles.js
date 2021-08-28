@@ -29,6 +29,7 @@ export const ContentPrimary = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 9% 2%;
   }
 `;
 
