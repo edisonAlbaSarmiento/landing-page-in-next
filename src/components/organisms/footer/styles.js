@@ -6,5 +6,5 @@ export const ContetFooter = styled.div`
   flex-direction: row;
   align-content: center;
   justify-content: center;
-  background-color: red;
+  background-color: #18181b;
 `;

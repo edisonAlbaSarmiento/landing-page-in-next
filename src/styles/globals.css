@@ -15,7 +15,7 @@ a {
   box-sizing: border-box;
 }
 
-.rec .rec-pagination{
+.rec .rec-pagination {
   display: none;
 }
 
@@ -23,17 +23,18 @@ a {
   width: 350px !important;
 }
 
-
-.rec .rec-carousel{
+.rec .rec-carousel {
   position: relative;
 }
-@media screen  and (max-width: 768px) {
-  .rec .rec-carousel{
+.demo-navigation .mdl-navigation__link:hover .material-icons {
+  background-color: #00bcd4 !important;
+  color: #fff !important;
+}
+@media screen and (max-width: 768px) {
+  .rec .rec-carousel {
     width: 400px;
   }
   .rec .rec-item-wrapper {
     width: 380px !important;
   }
-  
-  
 }
