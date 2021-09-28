@@ -12,14 +12,22 @@ function ContentContact(props) {
   return (
     <Content>
       <ContentTitle>
-        <TitleComponet variant="title" marginText="inherit" color="#ffff">
+        <TitleComponet variant='title' marginText='inherit' color='#ffff'>
           {textTitle}
         </TitleComponet>
         <TitleComponet
-          variant="subtitle"
-          color="#ffff"
-          fontSize="25px"
-          marginText="20px 0px 40.5px"
+          variant='subtitle'
+          color='#ffff'
+          fontSize='25px'
+          marginText='20px 0px 40.5px'
+        >
+          {subTitle}
+        </TitleComponet>
+        <TitleComponet
+          variant='subtitle'
+          color='#ffff'
+          fontSize='25px'
+          marginText='20px 0px 40.5px'
         >
           {subTitle}
         </TitleComponet>
@@ -27,8 +35,8 @@ function ContentContact(props) {
       <ContentForm>
         <FormStyle onSubmit={formikForm.handleSubmit}>
           <TextFieldComponent
-            label="Nombre Completo"
-            name="fullName"
+            label='Nombre Completo'
+            name='fullName'
             placeholder={formikForm.values.fullName}
             onChange={formikForm.handleChange}
             error={
@@ -40,8 +48,8 @@ function ContentContact(props) {
           />
 
           <TextFieldComponent
-            label="Email"
-            name="email"
+            label='Email'
+            name='email'
             placeholder={formikForm.values.email}
             onChange={formikForm.handleChange}
             error={formikForm.touched.email && Boolean(formikForm.errors.email)}
@@ -49,8 +57,8 @@ function ContentContact(props) {
             errorMessage={formikForm.touched.email && formikForm.errors.email}
           />
           <TextFieldComponent
-            label="Telefono"
-            name="cellphone"
+            label='Telefono'
+            name='cellphone'
             placeholder={formikForm.values.cellphone}
             onChange={formikForm.handleChange}
             error={
@@ -60,12 +68,12 @@ function ContentContact(props) {
             errorMessage={
               formikForm.touched.cellphone && formikForm.errors.cellphone
             }
-            type="number"
+            type='number'
           />
 
           <TextFieldComponent
-            label="Nombre de la organizacion"
-            name="nameOrganize"
+            label='Nombre de la organizacion'
+            name='nameOrganize'
             placeholder={formikForm.values.nameOrganize}
             onChange={formikForm.handleChange}
             error={
@@ -80,8 +88,8 @@ function ContentContact(props) {
             }
           />
           <TextFieldComponent
-            label="Select"
-            name="password"
+            label='Select'
+            name='password'
             placeholder={formikForm.values.password}
             onChange={formikForm.handleChange}
             error={
@@ -95,8 +103,8 @@ function ContentContact(props) {
             }
           />
           <TextFieldComponent
-            label="Mensaje"
-            name="message"
+            label='Mensaje'
+            name='message'
             placeholder={formikForm.values.message}
             onChange={formikForm.handleChange}
             error={
@@ -109,12 +117,12 @@ function ContentContact(props) {
           />
 
           <ButtonContact
-            widthButton="100%"
-            heightButtom="60px"
+            widthButton='100%'
+            heightButtom='60px'
             // onClick={onClick}
-            backgroundColorButton="transparent"
-            color="#FFFFFF"
-            borderColor="#7bf5b1"
+            backgroundColorButton='transparent'
+            color='#FFFFFF'
+            borderColor='#7bf5b1'
             title
           >
             Angendar una cita

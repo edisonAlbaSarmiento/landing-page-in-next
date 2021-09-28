@@ -56,7 +56,7 @@ function ContentFooter(params) {
               </TextFooter>
               <Redirect
                 href='https://imaginamoscom.typeform.com/to/wTCqDuyF'
-                fontWeight
+                fontWeight='true'
               >
                 haga clic aquí
               </Redirect>

@@ -6,49 +6,49 @@ const HomeTemplate = (props) => {
     <>
       <Grid
         container
-        direction="column"
-        justify="flex-start"
-        alignItems="center"
+        direction='column'
+        justifyContent='flex-start'
+        alignItems='center'
       >
         {props.header}
       </Grid>
       <Grid
         container
-        direction="column"
-        justify="flex-start"
-        alignItems="center"
+        direction='column'
+        justifyContent='flex-start'
+        alignItems='center'
       >
         {props.about}
       </Grid>
       <Grid
         container
-        direction="column"
-        justify="flex-start"
-        alignItems="center"
+        direction='column'
+        justifyContent='flex-start'
+        alignItems='center'
       >
         {props.informationPage}
       </Grid>
       <Grid
         container
-        direction="column"
-        justify="flex-start"
-        alignItems="center"
+        direction='column'
+        justifyContent='flex-start'
+        alignItems='center'
       >
         {props.team}
       </Grid>
       <Grid
         container
-        direction="column"
-        justify="flex-start"
-        alignItems="center"
+        direction='column'
+        justifyContent='flex-start'
+        alignItems='center'
       >
         {props.contact}
       </Grid>
       <Grid
         container
-        direction="column"
-        justify="flex-start"
-        alignItems="center"
+        direction='column'
+        justifyContent='flex-start'
+        alignItems='center'
       >
         {props.footer}
       </Grid>
